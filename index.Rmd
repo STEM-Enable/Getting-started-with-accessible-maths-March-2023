@@ -11,6 +11,12 @@ output:
   clavertondown::epub_clav:
     toc: true
     dev: svg
+  clavertondown::pdf_clav:
+    latex_engine: pdflatex
+    dev: pdf
+    keep_tex: true
+    fig_caption: false
+    toc: true
   clavertondown::word_clav:
     toc: true
     number_sections: true
@@ -25,12 +31,6 @@ output:
   clavertondown::html_clav:
     toc: true
     dev: svg
-  clavertondown::pdf_clav:
-    latex_engine: pdflatex
-    dev: pdf
-    keep_tex: true
-    fig_caption: false
-    toc: true
 ---
 
 \newpage
@@ -41,6 +41,8 @@ output:
 * Why worry about maths access?
 * What are the problems and solutions?
 * How do you get started?
+
+Live document: https://tinyurl.com/wu977wyv 
 
 # Why worry about maths access?
 
@@ -294,6 +296,7 @@ dev.off()
 
 To play with right now... or later!
 
+* This document: https://tinyurl.com/wu977wyv 
 * LaTeX available? Try [Lwarp](https://github.com/STEM-Enable/Getting-started-with-accessible-maths-March-2023/raw/main/example/LwarpExample.zip)
 * Rstudio available? Install rmarkdown and try [RMarkdown](https://stem-enable.github.io/RMarkdownWorkshop/)
 * Chrome web browser available? Try [Desmos with ChromeVox](https://people.bath.ac.uk/cspehj/coventry/arclengthInR.html)
@@ -305,7 +308,7 @@ Exchange ideas, think, chat, offer a report back:
 
 # Further information
 
-* This document: [Getting started with accessible maths March 2023]()
+* This document: https://tinyurl.com/wu977wyv 
   * There are links throughout to further resources for getting started
 * The core group is [JISC Accessibility Community Maths Working Group](https://github.com/A11yMaths) with mailing list [A11yMaths mailing list](https://www.jiscmail.ac.uk/cgi-bin/webadmin?A0=ACCESSIBLE-MATHS)
 * [**sigma** Network Accessibility Special Interest Group](http://www.sigma-network.ac.uk/sigs/accessibility-sig/)

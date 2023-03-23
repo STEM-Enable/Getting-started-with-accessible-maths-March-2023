@@ -1,0 +1,665 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  12pt,
+  a4paper]{extarticle}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Getting started with accessible maths},
+  pdfauthor={Emma Cliffe, Skills Centre: MASH, University of Bath},
+  pdflang={en},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{english}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\title{Getting started with accessible maths}
+\author{Emma Cliffe, Skills Centre: MASH, University of Bath}
+\date{}
+
+\usepackage{amsthm}
+\theoremstyle{plain}
+\newtheorem*{theorem*}{Theorem}\newtheorem{theorem}{Theorem}[section]
+\newtheorem*{Thought*}{Thought}\newtheorem{Thought}{Thought}[section]
+\theoremstyle{plain}
+\newtheorem*{proposition*}{Proposition}\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem*{Nugget*}{Nugget}\newtheorem{Nugget}[Thought]{Nugget}
+\theoremstyle{plain}
+\newtheorem*{lemma*}{Lemma}\newtheorem{lemma}{Lemma}[section]
+\theoremstyle{plain}
+\newtheorem*{corollary*}{Corollary}\newtheorem{corollary}{Corollary}[section]
+\theoremstyle{plain}
+\newtheorem*{conjecture*}{Conjecture}\newtheorem{conjecture}{Conjecture}[section]
+\theoremstyle{definition}
+\newtheorem*{definition*}{Definition}\newtheorem{definition}{Definition}[section]
+\theoremstyle{definition}
+\newtheorem*{example*}{Example}\newtheorem{example}{Example}[section]
+\theoremstyle{definition}
+\newtheorem*{exercise*}{Exercise}\newtheorem{exercise}{Exercise}[section]
+\theoremstyle{remark}
+\newtheorem*{remark*}{Remark}
+\newtheorem*{solution*}{Solution}
+\let\BeginKnitrBlock\begin \let\EndKnitrBlock\end
+
+
+%\usepackage[english,shorthands=off]{babel}
+\usepackage{etoolbox}
+\usepackage{spverbatim}
+\makeatletter
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\@ifpackageloaded{adjustbox}{}{\usepackage[Export]{adjustbox}}
+\makeatother
+\floatplacement{figure}{H}
+\newcommand{\scalefactor}{1.2}
+\adjustboxset*{min width=\scalefactor\width,max width=\linewidth}
+\renewcommand{\familydefault}{phv}
+\fontfamily{phv}\selectfont
+\renewcommand{\em}{\bf}\renewcommand{\textit}{\textbf}\renewcommand{\emph}{\textbf}\renewcommand{\it}{\bf}\renewcommand{\itshape}{\bf}
+\setlength{\parindent}{0.0pt}
+\setlength{\parskip}{1.0\baselineskip}
+\renewcommand{\baselinestretch}{1.5}\selectfont
+\setlength{\mathsurround}{0.2em}
+\setlength{\arraycolsep}{0.5cm}\renewcommand{\arraystretch}{1.5}
+\addtolength{\jot}{\baselineskip}
+\renewcommand{\;}{\,}
+\sloppy
+\allowdisplaybreaks
+\usepackage{amsthm}
+\newtheoremstyle{plain}{20pt}{3pt}{}{}{\bfseries}{.\newline\nobreak}{1.0em\nobreak}{}
+\newtheoremstyle{definition}{20pt}{3pt}{}{}{\bfseries}{.\newline\nobreak}{1.0em\nobreak}{}
+\newtheoremstyle{remark}{20pt}{3pt}{}{}{\bfseries}{.\newline\nobreak}{1.0em\nobreak}{}
+\csundef{Proof}
+\csundef{endProof}
+\newenvironment{Proof}
+  {\noindent{\bf Proof.}\hspace*{1em}}% Begin
+  {\qed\par}% End
+%% When redefining an environment it is vital that it has 
+%% the same number of arguments as the original
+\renewenvironment{proof}[1][\proofname]
+  {\trivlist\item\relax\noindent{\bf {#1}.}\hspace*{1em}}% Begin
+  {\qed\endtrivlist}% End
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+\newpage
+\pagenumbering{arabic}
+
+\hypertarget{where-do-you-start}{%
+\section*{Where do you start?}\label{where-do-you-start}}
+\addcontentsline{toc}{section}{Where do you start?}
+
+\begin{itemize}
+\tightlist
+\item
+  Why worry about maths access?
+\item
+  What are the problems and solutions?
+\item
+  How do you get started?
+\end{itemize}
+
+\hypertarget{why-worry-about-maths-access}{%
+\section{Why worry about maths access?}\label{why-worry-about-maths-access}}
+
+Accessibility is a legal requirement\ldots{} I am not a lawyer. Seek advice.
+
+\begin{itemize}
+\tightlist
+\item
+  Equal access:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    England, Scotland, Wales: \href{https://www.legislation.gov.uk/ukpga/2010/15/contents}{Equality Act 2010}
+  \item
+    Northern Ireland, as amended: \href{http://www.niassembly.gov.uk/globalassets/Documents/RaISe/Publications/2012/ofmdfm/2712.pdf}{Disability Discrimination Act 1995}
+  \item
+    Ireland: \href{https://www.ihrec.ie/guides-and-tools/human-rights-and-equality-in-the-provision-of-good-and-services/what-does-the-law-say/equal-status-acts/}{Equal Status Acts 2000 - 2018}
+  \end{itemize}
+\item
+  Accessible web content (considered to cover University VLE content):
+
+  \begin{itemize}
+  \tightlist
+  \item
+    UK: \href{https://www.legislation.gov.uk/uksi/2018/852/contents/made}{Public Sector Bodies (Websites and Mobile Applications) (No.~2) Accessibility Regulations 2018}
+  \item
+    Ireland: \href{https://www.irishstatutebook.ie/eli/2020/si/358/made/en/print}{European Union (Accessibility of Websites and Mobile Applications of Public Sector Bodies) Regulations 2020}
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{but-we-should-care-anyway}{%
+\subsection{But we should care anyway\ldots{}}\label{but-we-should-care-anyway}}
+
+Mathematics at university level is
+
+\begin{itemize}
+\tightlist
+\item
+  ``characterised by the need for a high degree of conceptual and abstract thinking within the learning process'' (Mathematics Subject Benchmark)
+\end{itemize}
+
+\textbf{We want} students to have the processing capacity to engage with concepts and abstract thinking!
+
+Students with a print disability, with difficulties with taking notes, memory and concentration may spend substantial processing capacity on entirely different tasks.
+
+\hypertarget{what-are-the-problems}{%
+\section{What are the problems?}\label{what-are-the-problems}}
+
+Generally speaking we need to make it possible to access and consume information in a variety of ways.
+
+\begin{itemize}
+\tightlist
+\item
+  All students, but especially those with e.g.~Dyslexia, benefit from colourful, interactive, responsive resources with well rendered maths and graphics, enriched with video and audio. Go for it!
+\item
+  But poorly made resources create practical and technical barriers:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Complex navigation/accurate input hard using keyboard/pointer only
+  \item
+    Maths needs to be chunkable and navigable for speech, magnification, Braille and small screens
+  \item
+    Use of colour-only to give meaning is a problem
+  \item
+    Raster graphics do not magnify/zoom well
+  \item
+    Responsive pages with multiple foci hard for VI users
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{maths-in-pdf-is-inaccessible}{%
+\subsection{Maths in PDF is inaccessible}\label{maths-in-pdf-is-inaccessible}}
+
+\hypertarget{could-we-solve-it-by}{%
+\subsection{Could we solve it by\ldots?}\label{could-we-solve-it-by}}
+
+You might ask, can we not solve this by ensuring that the PDF is accessible? Unfortunately, the answer is no. The act of creating the PDF destroys information about the structure of the mathematical expression.
+
+\includegraphics[width=0.6\textwidth,height=\textheight]{./Figs/reflowing.png}
+
+\hypertarget{what-are-the-solutions}{%
+\section{What are the solutions?}\label{what-are-the-solutions}}
+
+Using assistive technology effectively for maths requires:
+
+\begin{itemize}
+\tightlist
+\item
+  Authors to produce accessible mathematical materials
+\item
+  Readers to have assistive technology which works with the specific format of mathematical text
+\end{itemize}
+
+\hypertarget{structure}{%
+\subsection{Structure}\label{structure}}
+
+Computers rely on structural integrity to process maths:
+
+\begin{itemize}
+\tightlist
+\item
+  PDF, print, handwriting and E-books using images of maths cannot be processed. They are inaccessible and inflexible on, for instance, small screen devices. They are lossy formats for maths!
+\item
+  Word, HTML based formats and EPub3 have structural integrity for maths and are accessible to many assistive technologies
+\item
+  But not all AT can access maths all formats! PowerPoint 365 is theoretically accessible but most AT won't work with it
+\item
+  And most mathematicians use specialist scientific document preparation systems such as LaTeX, which, historically, have not output these formats
+\end{itemize}
+
+\hypertarget{could-we-convert-the-latex}{%
+\subsection{Could we convert the LaTeX?}\label{could-we-convert-the-latex}}
+
+\begin{itemize}
+\tightlist
+\item
+  It depends on the LaTeX\ldots{}
+\item
+  It is \textbf{not possible} to convert LaTeX to html in the general case
+\item
+  It is easy to `fall out' of the convertible subset without realising or knowing why, the addition of a package, change of preamble order, use of a seemingly innocent command\ldots{}
+\end{itemize}
+
+\hypertarget{could-we-convert-the-mathematicians}{%
+\subsection{Could we convert the mathematicians?!}\label{could-we-convert-the-mathematicians}}
+
+Any new document preparation system needs to \textbf{\emph{enable}} the writer by providing the key features of mathematical/scientific document preparation. And these features make things complex.
+
+\begin{itemize}
+\tightlist
+\item
+  Software is catching up and in flux.
+\item
+  Nothing is easy to learn.
+\end{itemize}
+
+Increasingly mathematicians are exploring and converting, but they need appropriate institutional infrastructure, support, workload time allocation and training. Without this the task remains unreasonable.
+
+\hypertarget{what-do-we-convert-to}{%
+\subsection{\texorpdfstring{What do we convert \textbf{\emph{to}}?}{What do we convert to?}}\label{what-do-we-convert-to}}
+
+Only three formats of mathematical text are accessible:
+
+\begin{itemize}
+\tightlist
+\item
+  HTML using MathJax to render the mathematics
+\item
+  Word/PowerPoint using the inbuilt equation editor
+\item
+  EPub3 using MathML
+\end{itemize}
+
+Whatever \textbf{other} formats you supply you \textbf{must} supply at least one or, ideally, all of these to meet the public bodies requirement.
+
+\begin{itemize}
+\tightlist
+\item
+  Supply your course content `spine' in this format.
+\end{itemize}
+
+\hypertarget{is-that-enough}{%
+\subsection{Is that enough?}\label{is-that-enough}}
+
+No.~The equal access acts mean we need to meet individual needs so you may need to produce any of the other formats. This makes PowerPoint a problem as it cannot be converted.
+
+\textbf{And} you also need to supply PDF!
+
+\begin{itemize}
+\tightlist
+\item
+  Not all accessibility is about technical access
+\item
+  Clear print PDF is selected most often by disabled students in the Department of Mathematical Sciences.
+\end{itemize}
+
+\hypertarget{how-do-you-get-started}{%
+\section{How do you get started?}\label{how-do-you-get-started}}
+
+Ideals are great but let us be pragmatic.
+
+\begin{itemize}
+\tightlist
+\item
+  Assess where you are
+\item
+  Have a plan for meeting individual needs for equal access
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Leadership: Recognise this may be expensive for a number of years. It will get cheaper. We've been doing this for nearly 20 years. This semester one lecturer used this plan.\\
+  \end{itemize}
+\item
+  Pick something achieveable to change in your general practice
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Leadership: What is achievable depends on the resources you provide and this is what ultimately reduces risk and cost.
+  \end{itemize}
+\item
+  Start!
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Be clear about what is and is not accessible and what a student should do if they need a different format (see having a plan)
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{wordpowerpoint-365}{%
+\subsection{Word/PowerPoint 365}\label{wordpowerpoint-365}}
+
+\begin{itemize}
+\tightlist
+\item
+  Use the inbuilt Accessibility Checker and information on e.g.~\href{https://support.office.com/en-gb/article/make-your-word-documents-accessible-to-people-with-disabilities-d9bf3683-87ac-47ea-b91a-78dcacb3c66d}{Making your Word documents accessible}
+\item
+  Write \emph{all} mathematical text written using the MS 365 equation editor. E.g. if you are writing about the variable \(x\) or \(\theta\) it should be written as an equation. If you are writing \(x^2\) it should be written as an equation.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Never use insert symbol.
+  \item
+    Never write superscripts, subscripts, fractions etc. using font or style changes and standard keyboard input alone
+  \item
+    Never use an image of an equation.
+  \end{itemize}
+\item
+  Use Review -\textgreater{} Read Aloud (Alt + Ctrl + Space) to check the maths
+\end{itemize}
+
+More information and tools within \href{https://stem-enable.github.io/WordWorkshop/}{accessible mathematical Word document workshop resources} and \href{https://bathmash.github.io/gettingstarted/Word/index.html}{effective (keyboard-only) input of maths in Word}.
+
+\hypertarget{sounds-solved-to-me}{%
+\subsection{Sounds solved to me?}\label{sounds-solved-to-me}}
+
+Some students will require MathType format
+
+\begin{itemize}
+\tightlist
+\item
+  Because their AT vendor has not implemented the interface to Word but the AT does work with MathType. Test everything and contact the vendors!
+\item
+  Materials should be prepared as above and then a \textbf{\emph{copy}} converted to MathType as automatic conversion of all expressions cannot be reversed.
+\end{itemize}
+
+Also\ldots{} this generally won't work for the mathematicians and some scientists.
+
+\begin{itemize}
+\tightlist
+\item
+  Word is not a scientific document preparation system.
+\item
+  For those who use LaTeX we need a different plan.
+\end{itemize}
+
+\hypertarget{web-wcag-2.1-aa-mathjax}{%
+\subsection{Web: WCAG 2.1 AA + MathJax!}\label{web-wcag-2.1-aa-mathjax}}
+
+\begin{itemize}
+\item
+  Check it meets the legal requirement of WCAG 2.1 Level AA with e.g.~\href{https://accessibilityinsights.io/docs/en/web/overview}{Accessibility Insights for Web plugin for Chrome}
+\item
+  Check it is MathJax\ldots{} Right click!
+  \[x = \frac{-b\pm\sqrt{b^2 - 4ac}}{2a}\]
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Provides/enables: navigation, chunking, zoom, copy/paste, colour, size and layout changes\ldots{}
+  \item
+    Structural integrity enables assistive technology including text-to-speech, screenreaders, electronic Braille
+  \item
+    Fallback for ARIA-aware AT without native support
+  \item
+    AT providers without native support and not ARIA aware are a problem but not your problem.
+  \end{itemize}
+\item
+  \href{https://people.bath.ac.uk/cspehj/coventry/arclengthInR.html}{Experience this yourself}
+\end{itemize}
+
+\hypertarget{supporting-mathematicians}{%
+\subsection{Supporting mathematicians}\label{supporting-mathematicians}}
+
+\begin{itemize}
+\tightlist
+\item
+  Web + MathJax is the most accessible end format for a mathematical or scientific document but we need a way to prepare the document.
+\item
+  We are not perscriptive, we'll support anything which works.
+\item
+  Two main approaches have attracted most of the mathematicians at Bath but there are some other rarer contenders!
+\end{itemize}
+
+\hypertarget{try-converting-the-latex}{%
+\subsection{Try converting the LaTeX}\label{try-converting-the-latex}}
+
+\begin{itemize}
+\tightlist
+\item
+  Experts: \href{https://hub.docker.com/r/bathmash/mathaltnotes}{tools which may work for a large subset but cannot tell you anything about why something doesn't work}
+\item
+  Non-experts at Bath who want to stick with LaTeX have found that \href{https://ctan.org/pkg/lwarp?lang=en}{lwarp} works for them if they are careful.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Beware of some hard work (documentation currently 1237 pages)
+  \item
+    What happens depends on what you are doing in LaTeX
+  \item
+    You have to work that out and test for accessibility for yourself.
+  \item
+    \href{LINK}{Quick lwarp demo} (\href{https://posit.cloud/content/5641574}{link for Emma during the talk})
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{rmarkdown-formats}{%
+\subsection{RMarkdown formats}\label{rmarkdown-formats}}
+
+RMarkdown is a language designed for transform to html
+
+\begin{itemize}
+\tightlist
+\item
+  LaTeX for equations
+\item
+  Simple markup language for the rest of the document.
+\item
+  Authors are confined to a transformable subset with a quick compile loop and a supportive GUI.
+\item
+  The output has known accessibility features.
+\item
+  The typesetting is still extensible, just more reasonably so.
+\item
+  \href{}{RMarkdown Demo}
+\item
+  More information on getting started with RMarkdown see \href{https://stem-enable.github.io/RMarkdownWorkshop/}{Using R as a basis for writing an accessible mathematical document}
+\end{itemize}
+
+\hypertarget{bookdownclavertondown}{%
+\subsection{Bookdown/Clavertondown}\label{bookdownclavertondown}}
+
+Eventually, you will probably want \href{https://bookdown.org/}{Bookdown}:
+
+\BeginKnitrBlock{theorem}
+{\label{thm:thm1} }Bookdown is needed for things like theorems and internal references
+\EndKnitrBlock{theorem}
+
+We built \href{https://bathmash.github.io/clavertondown/}{Clavertondown} for additional functionality important in pure mathematics and for lecturers generally.
+
+\BeginKnitrBlock{Thought}
+{\label{tho:tho1}}You can create new theorem types without affecting the Bookdown types such as theorem \ref{thm:thm1}.
+\EndKnitrBlock{Thought}
+
+\BeginKnitrBlock{Nugget}
+{\label{nug:nug1}}And you can have theorem types share numbering
+\EndKnitrBlock{Nugget}
+
+\hypertarget{maths-e-assessment}{%
+\subsection{Maths e-assessment}\label{maths-e-assessment}}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://docs.numbas.org.uk/en/latest/accessibility/editor.html}{Numbas aims to meet WCAG 2.1 AA}
+\item
+  \href{https://stack-assessment.org/Legal/Accessibility/}{Stack aims to meet WCAG 2.1 AA}
+\item
+  There are probably others but these are the only ones I have used
+\end{itemize}
+
+\hypertarget{simple-graphs-desmos}{%
+\subsection{Simple graphs: Desmos}\label{simple-graphs-desmos}}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://www.desmos.com/accessibility}{Desmos was designed to work and tested with screenreaders and written to conform to WCAG 2.1}
+\item
+  \href{https://people.bath.ac.uk/cspehj/coventry/arclengthInR.html}{Experience this yourself}
+\end{itemize}
+
+\includegraphics[width=0.3\textwidth,height=\textheight]{./Figs/desmos-sine-graph.png}
+
+\hypertarget{geogebra-but-be-careful}{%
+\subsection{Geogebra: but be careful!}\label{geogebra-but-be-careful}}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://www.geogebra.org/m/r2EF8uRx}{Geogebra aims to meet WCAG 2.1 AA}
+\item
+  But, just because you can make a usable accessible object with a piece of software doesn't mean every object you make is!
+\item
+  \href{https://bathmash.github.io/CETL-MSOR-2022-Beyond-alt-text/index.html}{Project \textbf{Beyond alt text} between Bath and Coventry produced guidelines}
+\item
+  It is possible and useful but you need to take time and care.
+\end{itemize}
+
+\hypertarget{brailler-for-the-statisticians}{%
+\subsection{BrailleR: for the statisticians}\label{brailler-for-the-statisticians}}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://github.com/ajrgodfrey/BrailleR}{BrailleR} is a project by and for \href{https://r-resources.massey.ac.nz/BrailleR/}{blind statisticians who use R}
+\end{itemize}
+
+\hypertarget{other-diagrams}{%
+\subsection{Other diagrams}\label{other-diagrams}}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{http://diagramcenter.org/}{DIAGRAM Center} has some great resources for those new to diagram description:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Poet Image Description Training Tool
+  \item
+    Image description guidelines
+  \item
+    Sample book
+  \item
+    \href{http://diagramcenter.org/diagramwebinars.html\#compleximages}{Webinar on complex images}
+  \end{itemize}
+\item
+  \href{https://www.ukaaf.org/standards/\#accessible-images}{UKAAF has guidance on accessible images}
+\item
+  \href{http://ncamftp.wgbh.org/ncam-old-site/experience_learn/educational_media/stemdx.html}{NCAM (Old site) has guidelines and examples}
+\end{itemize}
+
+\hypertarget{what-is-my-next-step}{%
+\section{What is my next step?}\label{what-is-my-next-step}}
+
+If you have a laptop, have a play right now!
+
+\begin{itemize}
+\tightlist
+\item
+  LaTeX available? Try \href{LINK}{Lwarp}
+\item
+  Rstudio available? Try \href{https://stem-enable.github.io/RMarkdownWorkshop/}{RMarkdown}
+\item
+  Chrome web browser available? Try \href{https://people.bath.ac.uk/cspehj/coventry/arclengthInR.html}{Desmos with ChromeVox}
+\item
+  Word user? Write some text and an equation and \href{https://stem-enable.github.io/WordWorkshop/immersive.html}{listen back to it}
+\end{itemize}
+
+If not, watch, exchange ideas, think, chat:
+
+\begin{itemize}
+\tightlist
+\item
+  What achieveable next step can you commit to to improve the accessiblibility of your mathematical teaching resources for next academic year?
+\end{itemize}
+
+\hypertarget{further-information}{%
+\section{Further information}\label{further-information}}
+
+\begin{itemize}
+\tightlist
+\item
+  This document: \href{}{Getting started with accessible maths March 2023}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    There are links throughout to further resources for getting started
+  \end{itemize}
+\item
+  The core group is \href{https://github.com/A11yMaths}{JISC Accessibility Community Maths Working Group} with mailing list \href{https://www.jiscmail.ac.uk/cgi-bin/webadmin?A0=ACCESSIBLE-MATHS}{A11yMaths mailing list}
+\item
+  \href{http://www.sigma-network.ac.uk/sigs/accessibility-sig/}{\textbf{sigma} Network Accessibility Special Interest Group}
+\item
+  A collection of links to most things I have done related to maths accessibility can be found at \href{https://www.bath.ac.uk/projects/mathematics-accessibility/}{Mathematics accessibility on the Skills Centre: MASH site}
+\item
+  My email address is \href{mailto:E.H.Cliffe@bath.ac.uk}{\nolinkurl{E.H.Cliffe@bath.ac.uk}} but please email my team \href{mailto:mash@bath.ac.uk}{MASH}, who, these days, know as much as I do!
+\end{itemize}
+
+\end{document}

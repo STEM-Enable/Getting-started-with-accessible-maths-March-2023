@@ -8,18 +8,18 @@ classoption: a4paper
 fontsize: 10pt
 geometry: margin=2.5cm
 output:
+  clavertondown::word_clav:
+    toc: true
+    number_sections: true
+    keep_md: true
   clavertondown::gitbook_clav:
     split_by: section
     config:
       download: [["Notes.pdf","Standard print PDF"], ["NotesClear.pdf","Clear print PDF"], ["NotesLarge.pdf","Large print PDF"], ["Notes.docx","Accessible Word document"], ["Notes.epub","Accessible EPub book" ]]
       sharing: no
-  clavertondown::html_clav:
-    toc: true
-  clavertondown::word_clav:
-    toc: true
-    number_sections: true
-    keep_md: true
   clavertondown::epub_clav:
+    toc: true
+  clavertondown::html_clav:
     toc: true
   clavertondown::pdf_clav:
     latex_engine: pdflatex
@@ -216,20 +216,14 @@ RMarkdown is a language designed for transform to html
 
 Eventually, you will probably want [Bookdown](https://bookdown.org/):
 
-```{theorem, label="thm1"}
-Bookdown is needed for things like theorems and internal references
-```
+\BeginKnitrBlock{theorem}<div class="bookdown-theorem" custom-style="TheoremStyleUpright" id="thm:thm1"><span class="thm:thm1" custom-style="NameStyle"><strong><span id="thm:thm1"></span>Theorem 4.1  </strong></span><p>Bookdown is needed for things like theorems and internal references</p></div>\EndKnitrBlock{theorem}
 
 We built [Clavertondown](https://bathmash.github.io/clavertondown/) for additional functionality important in pure mathematics and for lecturers generally. 
 
-```{newtheorem, env='Thought', label="tho1"}
-You can create new theorem types without affecting the Bookdown types such as theorem \@ref(thm:thm1).
-```
+\BeginKnitrBlock{Thought}<div class="Thought" custom-style="TheoremStyleUpright" id="tho:tho1"><span class="Thought" custom-style="NameStyle"><strong> Thought 4.1:  </strong></span><p>You can create new theorem types without affecting the Bookdown types such as theorem <a href="#thm:thm1">4.1</a>.</p></div>\EndKnitrBlock{Thought}
 
-```{newtheorem, env='Nugget', label="nug1"}
-And you can have theorem types share numbering
-
-```
+\BeginKnitrBlock{Nugget}<div class="Nugget" custom-style="TheoremStyleUpright" id="nug:nug1"><span class="Nugget" custom-style="NameStyle"><strong> Nugget 4.2:  </strong></span><p>And you can have theorem types share numbering
+</p></div>\EndKnitrBlock{Nugget}
 
 
 ## Maths e-assessment
@@ -256,20 +250,10 @@ And you can have theorem types share numbering
 
 * [BrailleR](https://github.com/ajrgodfrey/BrailleR) is a project by and for [blind statisticians who use R](https://r-resources.massey.ac.nz/BrailleR/)
 
-```{r libraries, eval=FALSE, include=FALSE}
-library(BrailleR)
-```
-```{r data, eval=FALSE, include=FALSE}
-mydata = rnorm(1000)
-```
 
-```{r makeplots, eval=FALSE, include=FALSE}
-MakeAccessibleSVG(hist(mydata),file="./Figs/myhist2")
-BrowseSVG(file="./Figs/myhist2",dir="./Figs")
-pdf('./Figs/myhist2.svg.pdf',width = 4,height=4,paper='special')
-hist(mydata)
-dev.off()
-```
+
+
+
 
 <!--![[Link to the interative plot](./Figs/myhist2.html)\label{histplotinteractive}](./Figs/myhist2.svg){longdesc=./myhist2.html}-->
 
@@ -304,3 +288,6 @@ If not, watch, exchange ideas, think, chat:
 * [**sigma** Network Accessibility Special Interest Group](http://www.sigma-network.ac.uk/sigs/accessibility-sig/)
 * A collection of links to most things I have done related to maths accessibility can be found at [Mathematics accessibility on the Skills Centre: MASH site](https://www.bath.ac.uk/projects/mathematics-accessibility/)
 * My email address is [E.H.Cliffe@bath.ac.uk](mailto:E.H.Cliffe@bath.ac.uk) but please email my team [MASH](mailto:mash@bath.ac.uk), who, these days, know as much as I do!
+
+<!--chapter:end:index.Rmd-->
+

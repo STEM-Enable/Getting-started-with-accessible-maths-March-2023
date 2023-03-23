@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="Getting started with accessible maths" />
+<meta property="og:type" content="book" />
+
+
+
+
+
+<meta name="author" content="Emma Cliffe, Skills Centre: MASH, University of Bath" />
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Register.MessageHook("End Math", function (msg) {
+  var nodes = Array.from(msg[1].querySelectorAll('.MJX_Assistive_MathML [id]'));
+  while (nodes.length) {
+    nodes.shift().removeAttribute('id');
+  }
+}, 20);
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  "fast-preview": {disabled: true},
+  explorer:{ subtitle: true },
+  MatchWebFonts: { 
+    matchFor: { "HTML-CSS": true, NativeMML: false, SVG: false },
+    fontCheckDelay: 2000,
+    fontCheckTimeout: 30 * 1000
+  },
+  "HTML-CSS": {
+    preferredFont: "STIX",
+    availableFonts: ["STIX","TeX"],
+    webFont: "STIX-Web",
+    linebreaks: { automatic: true, width: "90\% container" }
+  },
+  CommonHTML: {
+    linebreaks: { automatic: true, width: "90\% container" }
+  },
+  SVG: {
+    font: "STIX-Web",
+    linebreaks: { automatic: false, width: "90\% container" }
+  },
+  menuSettings: { 
+    collapsible: false, 
+    autocollapse: false, 
+    explorer: false 
+  }
+});
+</script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<meta name="description" content="Getting started with accessible maths">
+
+<title>Getting started with accessible maths</title>
+
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="libs/navigation-1.1/tabsets.js"></script>
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+</style>
+
+<style type="text/css">
+  a {
+   color: blue;
+  }
+
+  [custom-style=DefinitionStyle] {
+    margin-bottom: 1.5em;
+    margin-top:1.5em;
+    background-color: AliceBlue;
+    border-left-style: solid;
+    border-color: CadetBlue;
+    padding-left: 0.5em;
+  }
+
+  [custom-style=TheoremStyle] {
+    margin-bottom: 1.5em;
+    margin-top:1.5em;
+    background-color: honeydew;
+    border-left-style: solid;
+    border-color: darkseagreen;
+    padding-left: 0.5em;
+    font-style: italic;
+  }
+
+  [custom-style=TheoremStyleUpright] {
+    margin-bottom: 1.5em;
+    margin-top:1.5em;
+    background-color: honeydew;
+    border-left-style: solid;
+    border-color: darkseagreen;
+    padding-left: 0.5em;
+    font-style: normal;
+  }
+
+  [custom-style=NameStyle]{
+    font-style: normal;
+    font-weight: bold;
+  }
+
+  [custom-style=NameStyleItalics]{
+    font-style: italic;
+  }
+
+  
+  [custom-style=ProofStyle] {
+    margin-bottom: 1.5em;
+    margin-top:1.5em;
+    background-color: seashell;
+    border-left-style: solid;
+    border-color: darkkhaki;
+    padding-left: 0.5em;
+  }
+
+  [custom-style=ExampleStyle] {
+    margin-bottom: 1.5em;
+    margin-top:1.5em;
+    background-color: lavenderblush;
+    border-left-style: solid;
+    border-color: mediumorchid;
+    padding-left: 0.5em;
+  }
+
+  [data-custom-style=DefinitionStyle] {
+    margin-bottom: 1.5em;
+    margin-top:1.5em;
+    background-color: AliceBlue;
+    border-left-style: solid;
+    border-color: CadetBlue;
+    padding-left: 0.5em;
+  }
+
+  [data-custom-style=TheoremStyle] {
+    margin-bottom: 1.5em;
+    margin-top:1.5em;
+    background-color: honeydew;
+    border-left-style: solid;
+    border-color: darkseagreen;
+    padding-left: 0.5em;
+  }
+
+  [data-custom-style=TheoremStyleUpright] {
+    margin-bottom: 1.5em;
+    margin-top:1.5em;
+    background-color: honeydew;
+    border-left-style: solid;
+    border-color: darkseagreen;
+    padding-left: 0.5em;
+    font-style: normal;
+  }
+  
+  [data-custom-style=ProofStyle] {
+    margin-bottom: 1.5em;
+    margin-top:1.5em;
+    background-color: seashell;
+    border-left-style: solid;
+    border-color: darkkhaki;
+    padding-left: 0.5em;
+  }
+
+  [data-custom-style=ExampleStyle] {
+    margin-bottom: 1.5em;
+    margin-top:1.5em;
+    background-color: lavenderblush;
+    border-left-style: solid;
+    border-color: mediumorchid;
+    padding-left: 0.5em;
+  }
+
+  
+</style>
+
+</head>
+
+<body>
+
+<div class="container-fluid main-container">
+
+
+<!--bookdown:title:start-->
+<div id="header">
+<h1 class="title">Getting started with accessible maths</h1>
+<h4 class="author"><em>Emma Cliffe, Skills Centre: MASH, University of Bath</em></h4>
+</div>
+<!--bookdown:title:end-->
+
+<!--bookdown:toc:start-->
+<div id="TOC">
+<ul>
+<li><a href="#where-do-you-start">Where do you start?</a></li>
+<li><a href="#why-worry-about-maths-access"><span class="toc-section-number">1</span> Why worry about maths access?</a>
+<ul>
+<li><a href="#but-we-should-care-anyway"><span class="toc-section-number">1.1</span> But we should care anyway…</a></li>
+</ul></li>
+<li><a href="#what-are-the-problems"><span class="toc-section-number">2</span> What are the problems?</a>
+<ul>
+<li><a href="#maths-in-pdf-is-inaccessible"><span class="toc-section-number">2.1</span> Maths in PDF is inaccessible</a></li>
+<li><a href="#could-we-solve-it-by"><span class="toc-section-number">2.2</span> Could we solve it by…?</a></li>
+</ul></li>
+<li><a href="#what-are-the-solutions"><span class="toc-section-number">3</span> What are the solutions?</a>
+<ul>
+<li><a href="#structure"><span class="toc-section-number">3.1</span> Structure</a></li>
+<li><a href="#could-we-convert-the-latex"><span class="toc-section-number">3.2</span> Could we convert the LaTeX?</a></li>
+<li><a href="#could-we-convert-the-mathematicians"><span class="toc-section-number">3.3</span> Could we convert the mathematicians?!</a></li>
+<li><a href="#what-do-we-convert-to"><span class="toc-section-number">3.4</span> What do we convert <strong><em>to</em></strong>?</a></li>
+<li><a href="#is-that-enough"><span class="toc-section-number">3.5</span> Is that enough?</a></li>
+</ul></li>
+<li><a href="#how-do-you-get-started"><span class="toc-section-number">4</span> How do you get started?</a>
+<ul>
+<li><a href="#wordpowerpoint-365"><span class="toc-section-number">4.1</span> Word/PowerPoint 365</a></li>
+<li><a href="#sounds-solved-to-me"><span class="toc-section-number">4.2</span> Sounds solved to me?</a></li>
+<li><a href="#web-wcag-2.1-aa-mathjax"><span class="toc-section-number">4.3</span> Web: WCAG 2.1 AA + MathJax!</a></li>
+<li><a href="#supporting-mathematicians"><span class="toc-section-number">4.4</span> Supporting mathematicians</a></li>
+<li><a href="#try-converting-the-latex"><span class="toc-section-number">4.5</span> Try converting the LaTeX</a></li>
+<li><a href="#rmarkdown-formats"><span class="toc-section-number">4.6</span> RMarkdown formats</a></li>
+<li><a href="#bookdownclavertondown"><span class="toc-section-number">4.7</span> Bookdown/Clavertondown</a></li>
+<li><a href="#maths-e-assessment"><span class="toc-section-number">4.8</span> Maths e-assessment</a></li>
+<li><a href="#simple-graphs-desmos"><span class="toc-section-number">4.9</span> Simple graphs: Desmos</a></li>
+<li><a href="#geogebra-but-be-careful"><span class="toc-section-number">4.10</span> Geogebra: but be careful!</a></li>
+<li><a href="#brailler-for-the-statisticians"><span class="toc-section-number">4.11</span> BrailleR: for the statisticians</a></li>
+<li><a href="#other-diagrams"><span class="toc-section-number">4.12</span> Other diagrams</a></li>
+</ul></li>
+<li><a href="#what-is-my-next-step"><span class="toc-section-number">5</span> What is my next step?</a></li>
+<li><a href="#further-information"><span class="toc-section-number">6</span> Further information</a></li>
+</ul>
+</div>
+<!--bookdown:toc:end-->
+
+<!--bookdown:body:start-->
+<div id="where-do-you-start" class="section level1 unnumbered">
+<h1>Where do you start?</h1>
+<ul>
+<li>Why worry about maths access?</li>
+<li>What are the problems and solutions?</li>
+<li>How do you get started?</li>
+</ul>
+</div>
+<div id="why-worry-about-maths-access" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Why worry about maths access?</h1>
+<p>Accessibility is a legal requirement… I am not a lawyer. Seek advice.</p>
+<ul>
+<li>Equal access:
+<ul>
+<li>England, Scotland, Wales: <a href="https://www.legislation.gov.uk/ukpga/2010/15/contents">Equality Act 2010</a></li>
+<li>Northern Ireland, as amended: <a href="http://www.niassembly.gov.uk/globalassets/Documents/RaISe/Publications/2012/ofmdfm/2712.pdf">Disability Discrimination Act 1995</a></li>
+<li>Ireland: <a href="https://www.ihrec.ie/guides-and-tools/human-rights-and-equality-in-the-provision-of-good-and-services/what-does-the-law-say/equal-status-acts/">Equal Status Acts 2000 - 2018</a></li>
+</ul></li>
+<li>Accessible web content (considered to cover University VLE content):
+<ul>
+<li>UK: <a href="https://www.legislation.gov.uk/uksi/2018/852/contents/made">Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018</a></li>
+<li>Ireland: <a href="https://www.irishstatutebook.ie/eli/2020/si/358/made/en/print">European Union (Accessibility of Websites and Mobile Applications of Public Sector Bodies) Regulations 2020</a></li>
+</ul></li>
+</ul>
+<div id="but-we-should-care-anyway" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> But we should care anyway…</h2>
+<p>Mathematics at university level is</p>
+<ul>
+<li>“characterised by the need for a high degree of conceptual and abstract thinking within the learning process” (Mathematics Subject Benchmark)</li>
+</ul>
+<p><strong>We want</strong> students to have the processing capacity to engage with concepts and abstract thinking!</p>
+<p>Students with a print disability, with difficulties with taking notes, memory and concentration may spend substantial processing capacity on entirely different tasks.</p>
+</div>
+</div>
+<div id="what-are-the-problems" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> What are the problems?</h1>
+<p>Generally speaking we need to make it possible to access and consume information in a variety of ways.</p>
+<ul>
+<li>All students, but especially those with e.g. Dyslexia, benefit from colourful, interactive, responsive resources with well rendered maths and graphics, enriched with video and audio. Go for it!</li>
+<li>But poorly made resources create practical and technical barriers:
+<ul>
+<li>Complex navigation/accurate input hard using keyboard/pointer only</li>
+<li>Maths needs to be chunkable and navigable for speech, magnification, Braille and small screens</li>
+<li>Use of colour-only to give meaning is a problem</li>
+<li>Raster graphics do not magnify/zoom well</li>
+<li>Responsive pages with multiple foci hard for VI users</li>
+</ul></li>
+</ul>
+<div id="maths-in-pdf-is-inaccessible" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Maths in PDF is inaccessible</h2>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/BsTqEjTIILQ?start=42&amp;rel=0&amp;end=63" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+<div id="could-we-solve-it-by" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Could we solve it by…?</h2>
+<p>You might ask, can we not solve this by ensuring that the PDF is accessible? Unfortunately, the answer is no. The act of creating the PDF destroys information about the structure of the mathematical expression.</p>
+<div class="figure">
+<img src="Figs/reflowing.png" alt="Jumbled mess of elements of the quadratic equation with the fraction structure and square root structure completely destroyed." style="width:60.0%" />
+<p class="caption">Reflowing a PDF visually destroys the maths</p>
+</div>
+</div>
+</div>
+<div id="what-are-the-solutions" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> What are the solutions?</h1>
+<p>Using assistive technology effectively for maths requires:</p>
+<ul>
+<li>Authors to produce accessible mathematical materials</li>
+<li>Readers to have assistive technology which works with the specific format of mathematical text</li>
+</ul>
+<div id="structure" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Structure</h2>
+<p>Computers rely on structural integrity to process maths:</p>
+<ul>
+<li>PDF, print, handwriting and E-books using images of maths cannot be processed. They are inaccessible and inflexible on, for instance, small screen devices. They are lossy formats for maths!</li>
+<li>Word, HTML based formats and EPub3 have structural integrity for maths and are accessible to many assistive technologies</li>
+<li>But not all AT can access maths all formats! PowerPoint 365 is theoretically accessible but most AT won’t work with it</li>
+<li>And most mathematicians use specialist scientific document preparation systems such as LaTeX, which, historically, have not output these formats</li>
+</ul>
+</div>
+<div id="could-we-convert-the-latex" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> Could we convert the LaTeX?</h2>
+<ul>
+<li>It depends on the LaTeX…</li>
+<li>It is <strong>not possible</strong> to convert LaTeX to html in the general case</li>
+<li>It is easy to ‘fall out’ of the convertible subset without realising or knowing why, the addition of a package, change of preamble order, use of a seemingly innocent command…</li>
+</ul>
+</div>
+<div id="could-we-convert-the-mathematicians" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> Could we convert the mathematicians?!</h2>
+<p>Any new document preparation system needs to <strong><em>enable</em></strong> the writer by providing the key features of mathematical/scientific document preparation. And these features make things complex.</p>
+<ul>
+<li>Software is catching up and in flux.</li>
+<li>Nothing is easy to learn.</li>
+</ul>
+<p>Increasingly mathematicians are exploring and converting, but they need appropriate institutional infrastructure, support, workload time allocation and training. Without this the task remains unreasonable.</p>
+</div>
+<div id="what-do-we-convert-to" class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> What do we convert <strong><em>to</em></strong>?</h2>
+<p>Only three formats of mathematical text are accessible:</p>
+<ul>
+<li>HTML using MathJax to render the mathematics</li>
+<li>Word/PowerPoint using the inbuilt equation editor</li>
+<li>EPub3 using MathML</li>
+</ul>
+<p>Whatever <strong>other</strong> formats you supply you <strong>must</strong> supply at least one or, ideally, all of these to meet the public bodies requirement.</p>
+<ul>
+<li>Supply your course content ‘spine’ in this format.</li>
+</ul>
+</div>
+<div id="is-that-enough" class="section level2" number="3.5">
+<h2><span class="header-section-number">3.5</span> Is that enough?</h2>
+<p>No. The equal access acts mean we need to meet individual needs so you may need to produce any of the other formats. This makes PowerPoint a problem as it cannot be converted.</p>
+<p><strong>And</strong> you also need to supply PDF!</p>
+<ul>
+<li>Not all accessibility is about technical access</li>
+<li>Clear print PDF is selected most often by disabled students in the Department of Mathematical Sciences.</li>
+</ul>
+</div>
+</div>
+<div id="how-do-you-get-started" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> How do you get started?</h1>
+<p>Ideals are great but let us be pragmatic.</p>
+<ul>
+<li>Assess where you are</li>
+<li>Have a plan for meeting individual needs for equal access
+<ul>
+<li>Leadership: Recognise this may be expensive for a number of years. It will get cheaper. We’ve been doing this for nearly 20 years. This semester one lecturer used this plan.<br />
+</li>
+</ul></li>
+<li>Pick something achieveable to change in your general practice
+<ul>
+<li>Leadership: What is achievable depends on the resources you provide and this is what ultimately reduces risk and cost.</li>
+</ul></li>
+<li>Start!
+<ul>
+<li>Be clear about what is and is not accessible and what a student should do if they need a different format (see having a plan)</li>
+</ul></li>
+</ul>
+<div id="wordpowerpoint-365" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Word/PowerPoint 365</h2>
+<ul>
+<li>Use the inbuilt Accessibility Checker and information on e.g. <a href="https://support.office.com/en-gb/article/make-your-word-documents-accessible-to-people-with-disabilities-d9bf3683-87ac-47ea-b91a-78dcacb3c66d">Making your Word documents accessible</a></li>
+<li>Write <em>all</em> mathematical text written using the MS 365 equation editor. E.g. if you are writing about the variable <span class="math inline">\(x\)</span> or <span class="math inline">\(\theta\)</span> it should be written as an equation. If you are writing <span class="math inline">\(x^2\)</span> it should be written as an equation.
+<ul>
+<li>Never use insert symbol.</li>
+<li>Never write superscripts, subscripts, fractions etc. using font or style changes and standard keyboard input alone</li>
+<li>Never use an image of an equation.</li>
+</ul></li>
+<li>Use Review -&gt; Read Aloud (Alt + Ctrl + Space) to check the maths</li>
+</ul>
+<p>More information and tools within <a href="https://stem-enable.github.io/WordWorkshop/">accessible mathematical Word document workshop resources</a> and <a href="https://bathmash.github.io/gettingstarted/Word/index.html">effective (keyboard-only) input of maths in Word</a>.</p>
+</div>
+<div id="sounds-solved-to-me" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> Sounds solved to me?</h2>
+<p>Some students will require MathType format</p>
+<ul>
+<li>Because their AT vendor has not implemented the interface to Word but the AT does work with MathType. Test everything and contact the vendors!</li>
+<li>Materials should be prepared as above and then a <strong><em>copy</em></strong> converted to MathType as automatic conversion of all expressions cannot be reversed.</li>
+</ul>
+<p>Also… this generally won’t work for the mathematicians and some scientists.</p>
+<ul>
+<li>Word is not a scientific document preparation system.</li>
+<li>For those who use LaTeX we need a different plan.</li>
+</ul>
+</div>
+<div id="web-wcag-2.1-aa-mathjax" class="section level2" number="4.3">
+<h2><span class="header-section-number">4.3</span> Web: WCAG 2.1 AA + MathJax!</h2>
+<ul>
+<li><p>Check it meets the legal requirement of WCAG 2.1 Level AA with e.g. <a href="https://accessibilityinsights.io/docs/en/web/overview">Accessibility Insights for Web plugin for Chrome</a></p></li>
+<li><p>Check it is MathJax… Right click!
+<span class="math display">\[x = \frac{-b\pm\sqrt{b^2 - 4ac}}{2a}\]</span></p>
+<ul>
+<li>Provides/enables: navigation, chunking, zoom, copy/paste, colour, size and layout changes…</li>
+<li>Structural integrity enables assistive technology including text-to-speech, screenreaders, electronic Braille</li>
+<li>Fallback for ARIA-aware AT without native support</li>
+<li>AT providers without native support and not ARIA aware are a problem but not your problem.</li>
+</ul></li>
+<li><p><a href="https://people.bath.ac.uk/cspehj/coventry/arclengthInR.html">Experience this yourself</a></p></li>
+</ul>
+</div>
+<div id="supporting-mathematicians" class="section level2" number="4.4">
+<h2><span class="header-section-number">4.4</span> Supporting mathematicians</h2>
+<ul>
+<li>Web + MathJax is the most accessible end format for a mathematical or scientific document but we need a way to prepare the document.</li>
+<li>We are not perscriptive, we’ll support anything which works.</li>
+<li>Two main approaches have attracted most of the mathematicians at Bath but there are some other rarer contenders!</li>
+</ul>
+</div>
+<div id="try-converting-the-latex" class="section level2" number="4.5">
+<h2><span class="header-section-number">4.5</span> Try converting the LaTeX</h2>
+<ul>
+<li>Experts: <a href="https://hub.docker.com/r/bathmash/mathaltnotes">tools which may work for a large subset but cannot tell you anything about why something doesn’t work</a></li>
+<li>Non-experts at Bath who want to stick with LaTeX have found that <a href="https://ctan.org/pkg/lwarp?lang=en">lwarp</a> works for them if they are careful.
+<ul>
+<li>Beware of some hard work (documentation currently 1237 pages)</li>
+<li>What happens depends on what you are doing in LaTeX</li>
+<li>You have to work that out and test for accessibility for yourself.</li>
+<li><a href="LINK">Quick lwarp demo</a> (<a href="https://posit.cloud/content/5641574">link for Emma during the talk</a>)</li>
+</ul></li>
+</ul>
+</div>
+<div id="rmarkdown-formats" class="section level2" number="4.6">
+<h2><span class="header-section-number">4.6</span> RMarkdown formats</h2>
+<p>RMarkdown is a language designed for transform to html</p>
+<ul>
+<li>LaTeX for equations</li>
+<li>Simple markup language for the rest of the document.</li>
+<li>Authors are confined to a transformable subset with a quick compile loop and a supportive GUI.</li>
+<li>The output has known accessibility features.</li>
+<li>The typesetting is still extensible, just more reasonably so.</li>
+<li><a href="">RMarkdown Demo</a></li>
+<li>More information on getting started with RMarkdown see <a href="https://stem-enable.github.io/RMarkdownWorkshop/">Using R as a basis for writing an accessible mathematical document</a></li>
+</ul>
+</div>
+<div id="bookdownclavertondown" class="section level2" number="4.7">
+<h2><span class="header-section-number">4.7</span> Bookdown/Clavertondown</h2>
+<p>Eventually, you will probably want <a href="https://bookdown.org/">Bookdown</a>:</p>
+
+<div id="thm:thm1" class="bookdown-theorem" custom-style="TheoremStyle">
+<span class="thm:thm1" custom-style="NameStyle"><strong>Theorem 4.1:  </strong></span>
+<p>
+Bookdown is needed for things like theorems and internal references
+</p>
+</div>
+<p>We built <a href="https://bathmash.github.io/clavertondown/">Clavertondown</a> for additional functionality important in pure mathematics and for lecturers generally.</p>
+
+<div id="tho:tho1" class="Thought" custom-style="TheoremStyle">
+<span class="Thought" custom-style="NameStyle"><strong> Thought 4.1:  </strong></span>
+<p>
+You can create new theorem types without affecting the Bookdown types such as theorem <a href="#thm:thm1">4.1</a>.
+</p>
+</div>
+
+<div id="nug:nug1" class="Nugget" custom-style="TheoremStyle">
+<span class="Nugget" custom-style="NameStyle"><strong> Nugget 4.2:  </strong></span>
+<p>
+And you can have theorem types share numbering
+</p>
+</div>
+</div>
+<div id="maths-e-assessment" class="section level2" number="4.8">
+<h2><span class="header-section-number">4.8</span> Maths e-assessment</h2>
+<ul>
+<li><a href="https://docs.numbas.org.uk/en/latest/accessibility/editor.html">Numbas aims to meet WCAG 2.1 AA</a></li>
+<li><a href="https://stack-assessment.org/Legal/Accessibility/">Stack aims to meet WCAG 2.1 AA</a></li>
+<li>There are probably others but these are the only ones I have used</li>
+</ul>
+</div>
+<div id="simple-graphs-desmos" class="section level2" number="4.9">
+<h2><span class="header-section-number">4.9</span> Simple graphs: Desmos</h2>
+<ul>
+<li><a href="https://www.desmos.com/accessibility">Desmos was designed to work and tested with screenreaders and written to conform to WCAG 2.1</a></li>
+<li><a href="https://people.bath.ac.uk/cspehj/coventry/arclengthInR.html">Experience this yourself</a></li>
+</ul>
+<iframe src="https://www.desmos.com/calculator/rtvcqeg9ol?embed" width="700px" height="300px" style="border: 1px solid #ccc" frameborder="0">
+<div class="figure">
+<img src="Figs/desmos-sine-graph.png" longdesc="https://www.desmos.com/calculator/rtvcqeg9ol" style="width:30.0%" alt="" />
+<p class="caption"><a href="https://www.desmos.com/calculator/rtvcqeg9ol">Interactive plot of sine</a></p>
+</div>
+</iframe>
+</div>
+<div id="geogebra-but-be-careful" class="section level2" number="4.10">
+<h2><span class="header-section-number">4.10</span> Geogebra: but be careful!</h2>
+<ul>
+<li><a href="https://www.geogebra.org/m/r2EF8uRx">Geogebra aims to meet WCAG 2.1 AA</a></li>
+<li>But, just because you can make a usable accessible object with a piece of software doesn’t mean every object you make is!</li>
+<li><a href="https://bathmash.github.io/CETL-MSOR-2022-Beyond-alt-text/index.html">Project <strong>Beyond alt text</strong> between Bath and Coventry produced guidelines</a></li>
+<li>It is possible and useful but you need to take time and care.</li>
+</ul>
+</div>
+<div id="brailler-for-the-statisticians" class="section level2" number="4.11">
+<h2><span class="header-section-number">4.11</span> BrailleR: for the statisticians</h2>
+<ul>
+<li><a href="https://github.com/ajrgodfrey/BrailleR">BrailleR</a> is a project by and for <a href="https://r-resources.massey.ac.nz/BrailleR/">blind statisticians who use R</a></li>
+</ul>
+<!--![[Link to the interative plot](./Figs/myhist2.html)\label{histplotinteractive}](./Figs/myhist2.svg){longdesc=./myhist2.html}-->
+</div>
+<div id="other-diagrams" class="section level2" number="4.12">
+<h2><span class="header-section-number">4.12</span> Other diagrams</h2>
+<ul>
+<li><a href="http://diagramcenter.org/">DIAGRAM Center</a> has some great resources for those new to diagram description:
+<ul>
+<li>Poet Image Description Training Tool</li>
+<li>Image description guidelines</li>
+<li>Sample book</li>
+<li><a href="http://diagramcenter.org/diagramwebinars.html#compleximages">Webinar on complex images</a></li>
+</ul></li>
+<li><a href="https://www.ukaaf.org/standards/#accessible-images">UKAAF has guidance on accessible images</a></li>
+<li><a href="http://ncamftp.wgbh.org/ncam-old-site/experience_learn/educational_media/stemdx.html">NCAM (Old site) has guidelines and examples</a></li>
+</ul>
+</div>
+</div>
+<div id="what-is-my-next-step" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> What is my next step?</h1>
+<p>If you have a laptop, have a play right now!</p>
+<ul>
+<li>LaTeX available? Try <a href="LINK">Lwarp</a></li>
+<li>Rstudio available? Try <a href="https://stem-enable.github.io/RMarkdownWorkshop/">RMarkdown</a></li>
+<li>Chrome web browser available? Try <a href="https://people.bath.ac.uk/cspehj/coventry/arclengthInR.html">Desmos with ChromeVox</a></li>
+<li>Word user? Write some text and an equation and <a href="https://stem-enable.github.io/WordWorkshop/immersive.html">listen back to it</a></li>
+</ul>
+<p>If not, watch, exchange ideas, think, chat:</p>
+<ul>
+<li>What achieveable next step can you commit to to improve the accessiblibility of your mathematical teaching resources for next academic year?</li>
+</ul>
+</div>
+<div id="further-information" class="section level1" number="6">
+<h1><span class="header-section-number">6</span> Further information</h1>
+<ul>
+<li>This document: <a href="">Getting started with accessible maths March 2023</a>
+<ul>
+<li>There are links throughout to further resources for getting started</li>
+</ul></li>
+<li>The core group is <a href="https://github.com/A11yMaths">JISC Accessibility Community Maths Working Group</a> with mailing list <a href="https://www.jiscmail.ac.uk/cgi-bin/webadmin?A0=ACCESSIBLE-MATHS">A11yMaths mailing list</a></li>
+<li><a href="http://www.sigma-network.ac.uk/sigs/accessibility-sig/"><strong>sigma</strong> Network Accessibility Special Interest Group</a></li>
+<li>A collection of links to most things I have done related to maths accessibility can be found at <a href="https://www.bath.ac.uk/projects/mathematics-accessibility/">Mathematics accessibility on the Skills Centre: MASH site</a></li>
+<li>My email address is <a href="mailto:E.H.Cliffe@bath.ac.uk">E.H.Cliffe@bath.ac.uk</a> but please email my team <a href="mailto:mash@bath.ac.uk">MASH</a>, who, these days, know as much as I do!</li>
+</ul>
+<!--chapter:end:index.Rmd-->
+</div>
+<!--bookdown:body:end-->
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+</body>
+</html>

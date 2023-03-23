@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="ASCII"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1344px" height="960px" viewBox="0 0 1344 960" version="1.1">
+  <metadata xmlns:gridsvg="http://www.stat.auckland.ac.nz/~paul/R/gridSVG/">
+    <gridsvg:generator name="gridSVG" version="1.7-2" time="2020-06-02 12:51:32"/>
+    <gridsvg:argument name="name" value="./Figs/myhist2.svg"/>
+    <gridsvg:argument name="exportCoords" value="none"/>
+    <gridsvg:argument name="exportMappings" value="none"/>
+    <gridsvg:argument name="exportJS" value="none"/>
+    <gridsvg:argument name="res" value="192"/>
+    <gridsvg:argument name="prefix" value=""/>
+    <gridsvg:argument name="addClasses" value="FALSE"/>
+    <gridsvg:argument name="indent" value="TRUE"/>
+    <gridsvg:argument name="htmlWrapper" value="FALSE"/>
+    <gridsvg:argument name="usePaths" value="vpPaths"/>
+    <gridsvg:argument name="uniqueNames" value="TRUE"/>
+    <gridsvg:separator name="id.sep" value="."/>
+    <gridsvg:separator name="gPath.sep" value="::"/>
+    <gridsvg:separator name="vpPath.sep" value="::"/>
+  </metadata>
+  <g transform="translate(0, 960) scale(1, -1)">
+    <g id="gridSVG" fill="rgb(255,255,255)" stroke="rgb(0,0,0)" stroke-dasharray="none" stroke-width="2" font-size="32" font-family="Helvetica, Arial, FreeSans, Liberation Sans, Nimbus Sans L, sans-serif" opacity="1" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-opacity="1" fill-opacity="1" font-weight="normal" font-style="normal">
+      <g id="graphics-background.1">
+        <rect id="graphics-background.1.1" x="-336" y="-240" width="2016" height="1440" transform="" stroke="none" fill="rgb(255,255,255)" stroke-opacity="0" fill-opacity="1"/>
+      </g>
+      <g id="graphics-root.1"/>
+      <g id="graphics-root.2">
+        <g id="graphics-root::graphics-inner.1"/>
+      </g>
+      <g id="graphics-root.3">
+        <g id="graphics-root::graphics-inner.2">
+          <g id="graphics-root::graphics-inner::graphics-figure-1.1"/>
+          <defs>
+            <clipPath id="graphics-root::graphics-inner::graphics-figure-1-clip.1.clipPath">
+              <rect x="0" y="0" width="1344" height="960" fill="none" stroke="none"/>
+            </clipPath>
+          </defs>
+          <g id="graphics-root::graphics-inner::graphics-figure-1-clip.1" clip-path="url(#graphics-root::graphics-inner::graphics-figure-1-clip.1.clipPath)"/>
+        </g>
+      </g>
+      <g id="graphics-root.4">
+        <g id="graphics-root::graphics-inner.3">
+          <g id="graphics-root::graphics-inner::graphics-figure-1.2">
+            <g id="graphics-root::graphics-inner::graphics-figure-1::graphics-plot-1.1"/>
+            <defs>
+              <clipPath id="graphics-root::graphics-inner::graphics-figure-1::graphics-plot-1-clip.1.clipPath">
+                <rect x="157.44" y="195.84" width="1105.92" height="606.72" fill="none" stroke="none"/>
+              </clipPath>
+            </defs>
+            <g id="graphics-root::graphics-inner::graphics-figure-1::graphics-plot-1-clip.1" clip-path="url(#graphics-root::graphics-inner::graphics-figure-1::graphics-plot-1-clip.1.clipPath)"/>
+          </g>
+          <defs>
+            <clipPath id="graphics-root::graphics-inner::graphics-figure-1-clip.2.clipPath">
+              <rect x="0" y="0" width="1344" height="960" fill="none" stroke="none"/>
+            </clipPath>
+          </defs>
+          <g id="graphics-root::graphics-inner::graphics-figure-1-clip.2" clip-path="url(#graphics-root::graphics-inner::graphics-figure-1-clip.2.clipPath)">
+            <g id="graphics-root::graphics-inner::graphics-figure-1-clip::graphics-plot-1.1"/>
+          </g>
+        </g>
+      </g>
+      <g id="graphics-root.5">
+        <g id="graphics-root::graphics-inner.4">
+          <g id="graphics-root::graphics-inner::graphics-figure-1.3">
+            <g id="graphics-root::graphics-inner::graphics-figure-1::graphics-plot-1.2">
+              <g id="graphics-root::graphics-inner::graphics-figure-1::graphics-plot-1::graphics-window-1-0.1"/>
+            </g>
+            <defs>
+              <clipPath id="graphics-root::graphics-inner::graphics-figure-1::graphics-plot-1-clip.2.clipPath">
+                <rect x="157.44" y="195.84" width="1105.92" height="606.72" fill="none" stroke="none"/>
+              </clipPath>
+            </defs>
+            <g id="graphics-root::graphics-inner::graphics-figure-1::graphics-plot-1-clip.2" clip-path="url(#graphics-root::graphics-inner::graphics-figure-1::graphics-plot-1-clip.2.clipPath)">
+              <g id="graphics-root::graphics-inner::graphics-figure-1::graphics-plot-1-clip::graphics-window-1-0.1"/>
+            </g>
+          </g>
+          <defs>
+            <clipPath id="graphics-root::graphics-inner::graphics-figure-1-clip.3.clipPath">
+              <rect x="0" y="0" width="1344" height="960" fill="none" stroke="none"/>
+            </clipPath>
+          </defs>
+          <g id="graphics-root::graphics-inner::graphics-figure-1-clip.3" clip-path="url(#graphics-root::graphics-inner::graphics-figure-1-clip.3.clipPath)">
+            <g id="graphics-root::graphics-inner::graphics-figure-1-clip::graphics-plot-1.2">
+              <g id="graphics-root::graphics-inner::graphics-figure-1-clip::graphics-plot-1::graphics-window-1-0.1"/>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g id="graphics-root.6">
+        <g id="graphics-root::graphics-inner.5">
+          <g id="graphics-root::graphics-inner::graphics-figure-1.4">
+            <g id="graphics-root::graphics-inner::graphics-figure-1::graphics-plot-1.3">
+              <g id="graphics-root::graphics-inner::graphics-figure-1::graphics-plot-1::graphics-window-1-1.1"/>
+            </g>
+            <defs>
+              <clipPath id="graphics-root::graphics-inner::graphics-figure-1::graphics-plot-1-clip.3.clipPath">
+                <rect x="157.44" y="195.84" width="1105.92" height="606.72" fill="none" stroke="none"/>
+              </clipPath>
+            </defs>
+            <g id="graphics-root::graphics-inner::graphics-figure-1::graphics-plot-1-clip.3" clip-path="url(#graphics-root::graphics-inner::graphics-figure-1::graphics-plot-1-clip.3.clipPath)">
+              <g id="graphics-root::graphics-inner::graphics-figure-1::graphics-plot-1-clip::graphics-window-1-1.1"/>
+            </g>
+          </g>
+          <defs>
+            <clipPath id="graphics-root::graphics-inner::graphics-figure-1-clip.4.clipPath">
+              <rect x="0" y="0" width="1344" height="960" fill="none" stroke="none"/>
+            </clipPath>
+          </defs>
+          <g id="graphics-root::graphics-inner::graphics-figure-1-clip.4" clip-path="url(#graphics-root::graphics-inner::graphics-figure-1-clip.4.clipPath)">
+            <g id="graphics-root::graphics-inner::graphics-figure-1-clip::graphics-plot-1.3">
+              <g id="graphics-root::graphics-inner::graphics-figure-1-clip::graphics-plot-1::graphics-window-1-1.1"/>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g id="graphics-root.7">
+        <g id="graphics-root::graphics-inner.6">
+          <defs>
+            <clipPath id="graphics-root::graphics-inner::graphics-figure-1-clip.5.clipPath">
+              <rect x="0" y="0" width="1344" height="960" fill="none" stroke="none"/>
+            </clipPath>
+          </defs>
+          <g id="graphics-root::graphics-inner::graphics-figure-1-clip.5" clip-path="url(#graphics-root::graphics-inner::graphics-figure-1-clip.5.clipPath)">
+            <g id="graphics-root::graphics-inner::graphics-figure-1-clip::graphics-plot-1.4">
+              <g id="graphics-plot-1-main-1.1">
+                <g id="graphics-plot-1-main-1.1.1" transform="translate(710.4, 881.28)" stroke-width="0.1">
+                  <g id="graphics-plot-1-main-1.1.1.scale" transform="scale(1, -1)">
+                    <text x="0" y="0" id="graphics-plot-1-main-1.1.1.text" text-anchor="middle" font-family="Helvetica, Arial, FreeSans, Liberation Sans, Nimbus Sans L, sans-serif" stroke="rgb(0,0,0)" fill="rgb(0,0,0)" stroke-opacity="1" fill-opacity="1" font-size="38.4" font-weight="bold" font-style="normal">
+                      <tspan id="graphics-plot-1-main-1.1.1.tspan.1" dy="14" x="0">Histogram of mydata</tspan>
+                    </text>
+                  </g>
+                </g>
+              </g>
+              <g id="graphics-plot-1-xlab-1.1">
+                <g id="graphics-plot-1-xlab-1.1.1" transform="translate(710.4, 49.92)" stroke-width="0.1">
+                  <g id="graphics-plot-1-xlab-1.1.1.scale" transform="scale(1, -1)">
+                    <text x="0" y="0" id="graphics-plot-1-xlab-1.1.1.text" text-anchor="middle" font-family="Helvetica, Arial, FreeSans, Liberation Sans, Nimbus Sans L, sans-serif" stroke="rgb(0,0,0)" fill="rgb(0,0,0)" stroke-opacity="1" fill-opacity="1" font-size="32" font-weight="normal" font-style="normal">
+                      <tspan id="graphics-plot-1-xlab-1.1.1.tspan.1" dy="0" x="0">mydata</tspan>
+                    </text>
+                  </g>
+                </g>
+              </g>
+              <g id="graphics-plot-1-ylab-1.1">
+                <g id="graphics-plot-1-ylab-1.1.1" transform="translate(34.56, 499.2)" stroke-width="0.1">
+                  <g id="graphics-plot-1-ylab-1.1.1.scale" transform="scale(1, -1)">
+                    <text x="0" y="0" id="graphics-plot-1-ylab-1.1.1.text" transform="rotate(-90)" text-anchor="middle" font-family="Helvetica, Arial, FreeSans, Liberation Sans, Nimbus Sans L, sans-serif" stroke="rgb(0,0,0)" fill="rgb(0,0,0)" stroke-opacity="1" fill-opacity="1" font-size="32" font-weight="normal" font-style="normal">
+                      <tspan id="graphics-plot-1-ylab-1.1.1.tspan.1" dy="0" x="0">Frequency</tspan>
+                    </text>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g id="graphics-root.8">
+        <g id="graphics-root::graphics-inner.7">
+          <g id="graphics-root::graphics-inner::graphics-figure-1.5">
+            <g id="graphics-root::graphics-inner::graphics-figure-1::graphics-plot-1.4">
+              <g id="graphics-root::graphics-inner::graphics-figure-1::graphics-plot-1::graphics-window-1-1.2">
+                <g id="graphics-plot-1-bottom-axis-line-1.1">
+                  <title id="GRID.element.11.1">the x axis</title>
+                  <desc id="GRID.element.13.1">need something much smarter in here</desc>
+                  <g id="graphics-plot-1-bottom-axis-line-1.2">
+                    <polyline id="graphics-plot-1-bottom-axis-line-1.2.1" points="271.54,195.84 1149.26,195.84" stroke="rgb(0,0,0)" stroke-width="2" stroke-dasharray="none" stroke-linecap="round" stroke-miterlimit="10" stroke-linejoin="round" stroke-opacity="1" fill="none"/>
+                  </g>
+                </g>
+                <g id="graphics-plot-1-bottom-axis-ticks-1.1">
+                  <polyline id="graphics-plot-1-bottom-axis-ticks-1.1.1" points="271.54,195.84 271.54,176.64" stroke="rgb(0,0,0)" stroke-width="2" stroke-dasharray="none" stroke-linecap="round" stroke-miterlimit="10" stroke-linejoin="round" stroke-opacity="1" fill="none"/>
+                  <polyline id="graphics-plot-1-bottom-axis-ticks-1.1.2" points="417.83,195.84 417.83,176.64" stroke="rgb(0,0,0)" stroke-width="2" stroke-dasharray="none" stroke-linecap="round" stroke-miterlimit="10" stroke-linejoin="round" stroke-opacity="1" fill="none"/>
+                  <polyline id="graphics-plot-1-bottom-axis-ticks-1.1.3" points="564.11,195.84 564.11,176.64" stroke="rgb(0,0,0)" stroke-width="2" stroke-dasharray="none" stroke-linecap="round" stroke-miterlimit="10" stroke-linejoin="round" stroke-opacity="1" fill="none"/>
+                  <polyline id="graphics-plot-1-bottom-axis-ticks-1.1.4" points="710.4,195.84 710.4,176.64" stroke="rgb(0,0,0)" stroke-width="2" stroke-dasharray="none" stroke-linecap="round" stroke-miterlimit="10" stroke-linejoin="round" stroke-opacity="1" fill="none"/>
+                  <polyline id="graphics-plot-1-bottom-axis-ticks-1.1.5" points="856.69,195.84 856.69,176.64" stroke="rgb(0,0,0)" stroke-width="2" stroke-dasharray="none" stroke-linecap="round" stroke-miterlimit="10" stroke-linejoin="round" stroke-opacity="1" fill="none"/>
+                  <polyline id="graphics-plot-1-bottom-axis-ticks-1.1.6" points="1002.97,195.84 1002.97,176.64" stroke="rgb(0,0,0)" stroke-width="2" stroke-dasharray="none" stroke-linecap="round" stroke-miterlimit="10" stroke-linejoin="round" stroke-opacity="1" fill="none"/>
+                  <polyline id="graphics-plot-1-bottom-axis-ticks-1.1.7" points="1149.26,195.84 1149.26,176.64" stroke="rgb(0,0,0)" stroke-width="2" stroke-dasharray="none" stroke-linecap="round" stroke-miterlimit="10" stroke-linejoin="round" stroke-opacity="1" fill="none"/>
+                </g>
+                <g id="graphics-plot-1-bottom-axis-labels-1.1">
+                  <g id="graphics-plot-1-bottom-axis-labels-1.1.1" transform="translate(271.54, 126.72)" stroke-width="0.1">
+                    <g id="graphics-plot-1-bottom-axis-labels-1.1.1.scale" transform="scale(1, -1)">
+                      <text x="0" y="0" id="graphics-plot-1-bottom-axis-labels-1.1.1.text" text-anchor="middle" font-family="Helvetica, Arial, FreeSans, Liberation Sans, Nimbus Sans L, sans-serif" stroke="rgb(0,0,0)" fill="rgb(0,0,0)" stroke-opacity="1" fill-opacity="1" font-size="32" font-weight="normal" font-style="normal">
+                        <tspan id="graphics-plot-1-bottom-axis-labels-1.1.1.tspan.1" dy="0" x="0">-3</tspan>
+                      </text>
+                    </g>
+                  </g>
+                  <g id="graphics-plot-1-bottom-axis-labels-1.1.2" transform="translate(417.83, 126.72)" stroke-width="0.1">
+                    <g id="graphics-plot-1-bottom-axis-labels-1.1.2.scale" transform="scale(1, -1)">
+                      <text x="0" y="0" id="graphics-plot-1-bottom-axis-labels-1.1.2.text" text-anchor="middle" font-family="Helvetica, Arial, FreeSans, Liberation Sans, Nimbus Sans L, sans-serif" stroke="rgb(0,0,0)" fill="rgb(0,0,0)" stroke-opacity="1" fill-opacity="1" font-size="32" font-weight="normal" font-style="normal">
+                        <tspan id="graphics-plot-1-bottom-axis-labels-1.1.2.tspan.1" dy="0" x="0">-2</tspan>
+                      </text>
+                    </g>
+                  </g>
+                  <g id="graphics-plot-1-bottom-axis-labels-1.1.3" transform="translate(564.11, 126.72)" stroke-width="0.1">
+                    <g id="graphics-plot-1-bottom-axis-labels-1.1.3.scale" transform="scale(1, -1)">
+                      <text x="0" y="0" id="graphics-plot-1-bottom-axis-labels-1.1.3.text" text-anchor="middle" font-family="Helvetica, Arial, FreeSans, Liberation Sans, Nimbus Sans L, sans-serif" stroke="rgb(0,0,0)" fill="rgb(0,0,0)" stroke-opacity="1" fill-opacity="1" font-size="32" font-weight="normal" font-style="normal">
+                        <tspan id="graphics-plot-1-bottom-axis-labels-1.1.3.tspan.1" dy="0" x="0">-1</tspan>
+                      </text>
+                    </g>
+                  </g>
+                  <g id="graphics-plot-1-bottom-axis-labels-1.1.4" transform="translate(710.4, 126.72)" stroke-width="0.1">
+                    <g id="graphics-plot-1-bottom-axis-labels-1.1.4.scale" transform="scale(1, -1)">
+                      <text x="0" y="0" id="graphics-plot-1-bottom-axis-labels-1.1.4.text" text-anchor="middle" font-family="Helvetica, Arial, FreeSans, Liberation Sans, Nimbus Sans L, sans-serif" stroke="rgb(0,0,0)" fill="rgb(0,0,0)" stroke-opacity="1" fill-opacity="1" font-size="32" font-weight="normal" font-style="normal">
+                        <tspan id="graphics-plot-1-bottom-axis-labels-1.1.4.tspan.1" dy="0" x="0">0</tspan>
+                      </text>
+                    </g>
+                  </g>
+                  <g id="graphics-plot-1-bottom-axis-labels-1.1.5" transform="translate(856.69, 126.72)" stroke-width="0.1">
+                    <g id="graphics-plot-1-bottom-axis-labels-1.1.5.scale" transform="scale(1, -1)">
+                      <text x="0" y="0" id="graphics-plot-1-bottom-axis-labels-1.1.5.text" text-anchor="middle" font-family="Helvetica, Arial, FreeSans, Liberation Sans, Nimbus Sans L, sans-serif" stroke="rgb(0,0,0)" fill="rgb(0,0,0)" stroke-opacity="1" fill-opacity="1" font-size="32" font-weight="normal" font-style="normal">
+                        <tspan id="graphics-plot-1-bottom-axis-labels-1.1.5.tspan.1" dy="0" x="0">1</tspan>
+                      </text>
+                    </g>
+                  </g>
+                  <g id="graphics-plot-1-bottom-axis-labels-1.1.6" transform="translate(1002.97, 126.72)" stroke-width="0.1">
+                    <g id="graphics-plot-1-bottom-axis-labels-1.1.6.scale" transform="scale(1, -1)">
+                      <text x="0" y="0" id="graphics-plot-1-bottom-axis-labels-1.1.6.text" text-anchor="middle" font-family="Helvetica, Arial, FreeSans, Liberation Sans, Nimbus Sans L, sans-serif" stroke="rgb(0,0,0)" fill="rgb(0,0,0)" stroke-opacity="1" fill-opacity="1" font-size="32" font-weight="normal" font-style="normal">
+                        <tspan id="graphics-plot-1-bottom-axis-labels-1.1.6.tspan.1" dy="0" x="0">2</tspan>
+                      </text>
+                    </g>
+                  </g>
+                  <g id="graphics-plot-1-bottom-axis-labels-1.1.7" transform="translate(1149.26, 126.72)" stroke-width="0.1">
+                    <g id="graphics-plot-1-bottom-axis-labels-1.1.7.scale" transform="scale(1, -1)">
+                      <text x="0" y="0" id="graphics-plot-1-bottom-axis-labels-1.1.7.text" text-anchor="middle" font-family="Helvetica, Arial, FreeSans, Liberation Sans, Nimbus Sans L, sans-serif" stroke="rgb(0,0,0)" fill="rgb(0,0,0)" stroke-opacity="1" fill-opacity="1" font-size="32" font-weight="normal" font-style="normal">
+                        <tspan id="graphics-plot-1-bottom-axis-labels-1.1.7.tspan.1" dy="0" x="0">3</tspan>
+                      </text>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g id="graphics-root.9">
+        <g id="graphics-root::graphics-inner.8">
+          <g id="graphics-root::graphics-inner::graphics-figure-1.6">
+            <g id="graphics-root::graphics-inner::graphics-figure-1::graphics-plot-1.5">
+              <g id="graphics-root::graphics-inner::graphics-figure-1::graphics-plot-1::graphics-window-1-1.3">
+                <g id="graphics-plot-1-left-axis-line-1.1">
+                  <title id="GRID.element.15.1">the y axis</title>
+                  <desc id="GRID.element.17.1">need something much smarter in here</desc>
+                  <g id="graphics-plot-1-left-axis-line-1.2">
+                    <polyline id="graphics-plot-1-left-axis-line-1.2.1" points="157.44,218.31 157.44,780.09" stroke="rgb(0,0,0)" stroke-width="2" stroke-dasharray="none" stroke-linecap="round" stroke-miterlimit="10" stroke-linejoin="round" stroke-opacity="1" fill="none"/>
+                  </g>
+                </g>
+                <g id="graphics-plot-1-left-axis-ticks-1.1">
+                  <polyline id="graphics-plot-1-left-axis-ticks-1.1.1" points="157.44,218.31 138.24,218.31" stroke="rgb(0,0,0)" stroke-width="2" stroke-dasharray="none" stroke-linecap="round" stroke-miterlimit="10" stroke-linejoin="round" stroke-opacity="1" fill="none"/>
+                  <polyline id="graphics-plot-1-left-axis-ticks-1.1.2" points="157.44,358.76 138.24,358.76" stroke="rgb(0,0,0)" stroke-width="2" stroke-dasharray="none" stroke-linecap="round" stroke-miterlimit="10" stroke-linejoin="round" stroke-opacity="1" fill="none"/>
+                  <polyline id="graphics-plot-1-left-axis-ticks-1.1.3" points="157.44,499.2 138.24,499.2" stroke="rgb(0,0,0)" stroke-width="2" stroke-dasharray="none" stroke-linecap="round" stroke-miterlimit="10" stroke-linejoin="round" stroke-opacity="1" fill="none"/>
+                  <polyline id="graphics-plot-1-left-axis-ticks-1.1.4" points="157.44,639.64 138.24,639.64" stroke="rgb(0,0,0)" stroke-width="2" stroke-dasharray="none" stroke-linecap="round" stroke-miterlimit="10" stroke-linejoin="round" stroke-opacity="1" fill="none"/>
+                  <polyline id="graphics-plot-1-left-axis-ticks-1.1.5" points="157.44,780.09 138.24,780.09" stroke="rgb(0,0,0)" stroke-width="2" stroke-dasharray="none" stroke-linecap="round" stroke-miterlimit="10" stroke-linejoin="round" stroke-opacity="1" fill="none"/>
+                </g>
+                <g id="graphics-plot-1-left-axis-labels-1.1">
+                  <g id="graphics-plot-1-left-axis-labels-1.1.1" transform="translate(111.36, 218.31)" stroke-width="0.1">
+                    <g id="graphics-plot-1-left-axis-labels-1.1.1.scale" transform="scale(1, -1)">
+                      <text x="0" y="0" id="graphics-plot-1-left-axis-labels-1.1.1.text" transform="rotate(-90)" text-anchor="middle" font-family="Helvetica, Arial, FreeSans, Liberation Sans, Nimbus Sans L, sans-serif" stroke="rgb(0,0,0)" fill="rgb(0,0,0)" stroke-opacity="1" fill-opacity="1" font-size="32" font-weight="normal" font-style="normal">
+                        <tspan id="graphics-plot-1-left-axis-labels-1.1.1.tspan.1" dy="0" x="0">0</tspan>
+                      </text>
+                    </g>
+                  </g>
+                  <g id="graphics-plot-1-left-axis-labels-1.1.2" transform="translate(111.36, 358.76)" stroke-width="0.1">
+                    <g id="graphics-plot-1-left-axis-labels-1.1.2.scale" transform="scale(1, -1)">
+                      <text x="0" y="0" id="graphics-plot-1-left-axis-labels-1.1.2.text" transform="rotate(-90)" text-anchor="middle" font-family="Helvetica, Arial, FreeSans, Liberation Sans, Nimbus Sans L, sans-serif" stroke="rgb(0,0,0)" fill="rgb(0,0,0)" stroke-opacity="1" fill-opacity="1" font-size="32" font-weight="normal" font-style="normal">
+                        <tspan id="graphics-plot-1-left-axis-labels-1.1.2.tspan.1" dy="0" x="0">50</tspan>
+                      </text>
+                    </g>
+                  </g>
+                  <g id="graphics-plot-1-left-axis-labels-1.1.3" transform="translate(111.36, 499.2)" stroke-width="0.1">
+                    <g id="graphics-plot-1-left-axis-labels-1.1.3.scale" transform="scale(1, -1)">
+                      <text x="0" y="0" id="graphics-plot-1-left-axis-labels-1.1.3.text" transform="rotate(-90)" text-anchor="middle" font-family="Helvetica, Arial, FreeSans, Liberation Sans, Nimbus Sans L, sans-serif" stroke="rgb(0,0,0)" fill="rgb(0,0,0)" stroke-opacity="1" fill-opacity="1" font-size="32" font-weight="normal" font-style="normal">
+                        <tspan id="graphics-plot-1-left-axis-labels-1.1.3.tspan.1" dy="0" x="0">100</tspan>
+                      </text>
+                    </g>
+                  </g>
+                  <g id="graphics-plot-1-left-axis-labels-1.1.4" transform="translate(111.36, 639.64)" stroke-width="0.1">
+                    <g id="graphics-plot-1-left-axis-labels-1.1.4.scale" transform="scale(1, -1)">
+                      <text x="0" y="0" id="graphics-plot-1-left-axis-labels-1.1.4.text" transform="rotate(-90)" text-anchor="middle" font-family="Helvetica, Arial, FreeSans, Liberation Sans, Nimbus Sans L, sans-serif" stroke="rgb(0,0,0)" fill="rgb(0,0,0)" stroke-opacity="1" fill-opacity="1" font-size="32" font-weight="normal" font-style="normal">
+                        <tspan id="graphics-plot-1-left-axis-labels-1.1.4.tspan.1" dy="0" x="0">150</tspan>
+                      </text>
+                    </g>
+                  </g>
+                  <g id="graphics-plot-1-left-axis-labels-1.1.5" transform="translate(111.36, 780.09)" stroke-width="0.1">
+                    <g id="graphics-plot-1-left-axis-labels-1.1.5.scale" transform="scale(1, -1)">
+                      <text x="0" y="0" id="graphics-plot-1-left-axis-labels-1.1.5.text" transform="rotate(-90)" text-anchor="middle" font-family="Helvetica, Arial, FreeSans, Liberation Sans, Nimbus Sans L, sans-serif" stroke="rgb(0,0,0)" fill="rgb(0,0,0)" stroke-opacity="1" fill-opacity="1" font-size="32" font-weight="normal" font-style="normal">
+                        <tspan id="graphics-plot-1-left-axis-labels-1.1.5.tspan.1" dy="0" x="0">200</tspan>
+                      </text>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+      <g id="graphics-root.10">
+        <g id="graphics-root::graphics-inner.9">
+          <g id="graphics-root::graphics-inner::graphics-figure-1.7">
+            <defs>
+              <clipPath id="graphics-root::graphics-inner::graphics-figure-1::graphics-plot-1-clip.4.clipPath">
+                <rect x="157.44" y="195.84" width="1105.92" height="606.72" fill="none" stroke="none"/>
+              </clipPath>
+            </defs>
+            <g id="graphics-root::graphics-inner::graphics-figure-1::graphics-plot-1-clip.4" clip-path="url(#graphics-root::graphics-inner::graphics-figure-1::graphics-plot-1-clip.4.clipPath)">
+              <g id="graphics-root::graphics-inner::graphics-figure-1::graphics-plot-1-clip::graphics-window-1-1.2">
+                <g id="graphics-plot-1-rect-1.1">
+                  <rect id="graphics-plot-1-rect-1.1.1" x="198.4" y="218.31" width="73.14" height="8.43" transform="" stroke="rgb(0,0,0)" fill="rgb(211,211,211)" stroke-dasharray="none" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" stroke-linejoin="round" stroke-opacity="1" fill-opacity="1"/>
+                  <rect id="graphics-plot-1-rect-1.1.2" x="271.54" y="218.31" width="73.14" height="16.85" transform="" stroke="rgb(0,0,0)" fill="rgb(211,211,211)" stroke-dasharray="none" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" stroke-linejoin="round" stroke-opacity="1" fill-opacity="1"/>
+                  <rect id="graphics-plot-1-rect-1.1.3" x="344.69" y="218.31" width="73.14" height="50.56" transform="" stroke="rgb(0,0,0)" fill="rgb(211,211,211)" stroke-dasharray="none" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" stroke-linejoin="round" stroke-opacity="1" fill-opacity="1"/>
+                  <rect id="graphics-plot-1-rect-1.1.4" x="417.83" y="218.31" width="73.14" height="126.4" transform="" stroke="rgb(0,0,0)" fill="rgb(211,211,211)" stroke-dasharray="none" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" stroke-linejoin="round" stroke-opacity="1" fill-opacity="1"/>
+                  <rect id="graphics-plot-1-rect-1.1.5" x="490.97" y="218.31" width="73.14" height="280.89" transform="" stroke="rgb(0,0,0)" fill="rgb(211,211,211)" stroke-dasharray="none" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" stroke-linejoin="round" stroke-opacity="1" fill-opacity="1"/>
+                  <rect id="graphics-plot-1-rect-1.1.6" x="564.11" y="218.31" width="73.14" height="415.72" transform="" stroke="rgb(0,0,0)" fill="rgb(211,211,211)" stroke-dasharray="none" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" stroke-linejoin="round" stroke-opacity="1" fill-opacity="1"/>
+                  <rect id="graphics-plot-1-rect-1.1.7" x="637.26" y="218.31" width="73.14" height="505.6" transform="" stroke="rgb(0,0,0)" fill="rgb(211,211,211)" stroke-dasharray="none" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" stroke-linejoin="round" stroke-opacity="1" fill-opacity="1"/>
+                  <rect id="graphics-plot-1-rect-1.1.8" x="710.4" y="218.31" width="73.14" height="561.78" transform="" stroke="rgb(0,0,0)" fill="rgb(211,211,211)" stroke-dasharray="none" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" stroke-linejoin="round" stroke-opacity="1" fill-opacity="1"/>
+                  <rect id="graphics-plot-1-rect-1.1.9" x="783.54" y="218.31" width="73.14" height="418.52" transform="" stroke="rgb(0,0,0)" fill="rgb(211,211,211)" stroke-dasharray="none" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" stroke-linejoin="round" stroke-opacity="1" fill-opacity="1"/>
+                  <rect id="graphics-plot-1-rect-1.1.10" x="856.69" y="218.31" width="73.14" height="249.99" transform="" stroke="rgb(0,0,0)" fill="rgb(211,211,211)" stroke-dasharray="none" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" stroke-linejoin="round" stroke-opacity="1" fill-opacity="1"/>
+                  <rect id="graphics-plot-1-rect-1.1.11" x="929.83" y="218.31" width="73.14" height="106.74" transform="" stroke="rgb(0,0,0)" fill="rgb(211,211,211)" stroke-dasharray="none" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" stroke-linejoin="round" stroke-opacity="1" fill-opacity="1"/>
+                  <rect id="graphics-plot-1-rect-1.1.12" x="1002.97" y="218.31" width="73.14" height="47.75" transform="" stroke="rgb(0,0,0)" fill="rgb(211,211,211)" stroke-dasharray="none" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" stroke-linejoin="round" stroke-opacity="1" fill-opacity="1"/>
+                  <rect id="graphics-plot-1-rect-1.1.13" x="1076.11" y="218.31" width="73.14" height="16.85" transform="" stroke="rgb(0,0,0)" fill="rgb(211,211,211)" stroke-dasharray="none" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" stroke-linejoin="round" stroke-opacity="1" fill-opacity="1"/>
+                  <rect id="graphics-plot-1-rect-1.1.14" x="1149.26" y="218.31" width="73.14" height="2.81" transform="" stroke="rgb(0,0,0)" fill="rgb(211,211,211)" stroke-dasharray="none" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" stroke-linejoin="round" stroke-opacity="1" fill-opacity="1"/>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

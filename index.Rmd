@@ -1,0 +1,320 @@
+---
+title: "Getting started with accessible maths"
+author: 'Emma Cliffe, Skills Centre: MASH, University of Bath'
+date: 'Sustaining Accessibility in Mathematics, March 2023'
+site: bookdown::bookdown_site
+lang: en
+documentclass: article
+classoption: a4paper
+fontsize: 10pt
+geometry: margin=2.5cm
+output:
+  clavertondown::html_clav:
+    toc: true
+  clavertondown::pdf_clav:
+    latex_engine: pdflatex
+    dev: pdf
+    keep_tex: true
+    fig_caption: false
+    toc: true
+  clavertondown::gitbook_clav:
+    split_by: section
+    config:
+      download: [["Notes.pdf","Standard print PDF"], ["NotesClear.pdf","Clear print PDF"], ["NotesLarge.pdf","Large print PDF"], ["Notes.docx","Accessible Word document"], ["Notes.epub","Accessible EPub book" ]]
+      sharing: no
+  clavertondown::word_clav:
+    toc: true
+    number_sections: true
+    keep_md: true
+  clavertondown::epub_clav:
+    toc: true
+---
+
+\newpage
+\pagenumbering{arabic}
+
+# Where do you start? {-}
+
+* Why worry about maths accessibility?
+* What problems need to be solved?
+* How do you get started?
+
+# Why worry about maths accessibility?
+
+This is a legal requirement...
+
+* Equality Act 2010 (England, Scotland, Wales), Disability Discrimination Act 1995 (as amended) (UK), Equal Status Acts (2000 - 2018) (Ireland)
+* Directive 2016/2102 of the European Parliament and of the Council on the accessiblity of websites and mobile applications of public sector bodies
+  * Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations (UK)
+    * Your institution will have, by law, a statement about accessibility e.g. https://www.bath.ac.uk/corporate-information/website-accessibility-statement/ which should cover e-learning resources
+    * Learn more about the legal requirements at https://abilitynet.org.uk/news-blogs/your-public-sector-website-prepared-new-regulations
+  * European Union (Accessibility of Websites and Mobile Applications of Public Sector Bodies) Regulations 2020 (Ireland)
+    * Appears to be interpreted to cover educational resources here too e.g. https://www.ul.ie/ltf/articles/quick-tips-for-teaching-online-accessibility-educational-material-and-universal-design
+
+Please seek appropriate legal advice from your institution. I am not a lawyer. 
+
+## But we should care anyway...
+
+Mathematics at university level is
+
+* "characterised by the need for a high degree of conceptual and abstract thinking within the learning process" (Mathematics Subject Benchmark)
+
+**We want** students to have the processing capacity to engage with concepts and abstract thinking!
+
+* Students with a print disability, with difficulties with taking notes, memory and concentration may spend substantial processing capacity on entirely different tasks
+
+* **All students** new to e-learning are trying to find new ways to learn and consume mathematics. This will require them to interact with resources in new ways and will impact their processing capacity.
+
+# What problems need to be solved?
+
+Generally speaking we need to make it possible to access and consume information in a variety of ways. 
+
+* All students, but especially those with e.g. Dyslexia, will benefit from interactive and responsive resources which are colourful, have well rendered maths and graphics and are enriched with video and audio. Go for it!
+* But such resources can raise practical and technical barriers for some if poorly made:
+  * Complex navigation and accurate input may be difficult keyboard only or pointer only
+  * Maths needs to be chunkable and navigable for speech, magnification, Braille and small screens
+  * Use of colour-only to give meaning is a problem
+  * Raster graphics do not magnify/zoom well
+  * Responsive pages with multiple foci hard for VI users
+
+## PDFs containing maths are inaccessible
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/BsTqEjTIILQ?start=42&rel=0&end=63" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Could we solve it by...?
+
+You might ask, can we not solve this by ensuring that the PDF is accessible? Unfortunately, the answer is no. The act of creating the PDF destroys information about the structure of the mathematical expression. 
+
+![Reflowing a PDF visually destroys the maths](./reflowing.png){alt="Jumbled mess of elements of the quadratic equation with the fraction structure and square root structure completely destroyed." width="60%"}
+
+
+## Structure
+
+* Computers rely on structural integrity to process maths:
+  * PDF, print, handwriting and E-books using images of maths cannot be processed. They are inaccessible and inflexible on, for instance, small screen devices. They are lossy formats for maths!
+  * Word, HTML based formats and EPub3 have structural integrity for maths and are accessible to many assistive technologies (AT)
+  * But not all AT can access maths all formats! PowerPoint 365 is theoretically accessible but most AT won't work with it
+* Using a computer with or without assistive technology to write mathematics is a specialist skill!
+* Using AT effectively for maths requires authors to produce accessible materials which is challenging due to how mathematicians and scientists typically produce text and documents.
+
+## Could we convert the LaTeX?
+
+* It depends on the LaTeX...
+* The past: use [tools which may or may not work and that cannot tell you, in general why something doesn't work created and driven by specialists](https://hub.docker.com/r/bathmash/mathaltnotes)
+* The future? [lwarp](https://ctan.org/pkg/lwarp?lang=en) but beware of some hard work (documentation currently 1237 pages) - what happens depends on what you are doing in LaTeX and how and you have to work that out and test for accessibility for yourself. 
+* It is **not possible** to convert LaTeX to html in the general case. 
+
+## Could we convert the mathematicians?!
+
+Any new document preparation system needs to ***enable*** the writer by providing the key features of mathematical/scientific document preparation. And these features make things complex. 
+
+* Software is catching up and in flux.
+* Nothing is easy to learn.
+
+Increasingly mathematicians are exploring and converting, but they need appropriate institutional infrastructure, support, workload time allocation and training. Without this the task remains unreasonable.  
+
+# What do we convert ***to***?
+
+From a technical point of view there are only three formats of mathematical text which are accessible:
+
+* HTML using MathJax to render the mathematics
+* Word
+* EPub3
+
+Whatever **other** formats you supply you **must** supply at least one or, ideally, all of these (some technology can only access one format, EPub3 has least software support). 
+
+* Supply your course content 'spine' in this format.
+
+**But** you also need to supply PDF! 
+
+* Not all accessibility is about technical access
+* Clear print PDF is selected most often by disabled students in the Department of Mathematical Sciences.
+
+# How do you get started?
+
+## Word 365: Accessibility checker + Equation editor
+
+  * Use the inbuilt Word Accessibility Checker and information on [Making your Word documents accessible](https://support.office.com/en-gb/article/make-your-word-documents-accessible-to-people-with-disabilities-d9bf3683-87ac-47ea-b91a-78dcacb3c66d)
+  * Write *all* mathematical text written using the Word 365 equation editor. E.g. if you are writing about the variable \(x\) or \(\theta\) it should be written as an equation. If you are writing \(x^2\) it should be written as an equation.
+    * Never use insert symbol.
+    * Never write superscripts, subscripts, fractions etc. using font or style changes and standard keyboard input alone
+    * Never use an image of an equation.
+  * Use Review -> Read Aloud (Alt + Ctrl + Space) to check the maths 
+
+More information and tools within [accessible mathematical Word document workshop resources](https://stem-enable.github.io/WordWorkshop/) and [effective (keyboard-only) input of maths in Word](https://bathmash.github.io/gettingstarted/Word/index.html). 
+ 
+## Sounds solved to me?
+ 
+Some students will require MathType format
+
+* Because their AT vendor has not implemented the interface to Word but the AT does work with MathType. Test everything and contact the vendors!
+* Materials should be prepared as above and then a ***copy*** converted to MathType as automatic conversion of all expressions cannot be reversed.
+
+Also... this generally won't work for the mathematicians and some scientists.
+ 
+* Word is not a scientific document preparation system. 
+* For those who use LaTeX we need a different plan.
+
+
+## Web: WCAG 2.1 AA + MathJax!
+
+* Check it meets the legal requirement of WCAG 2.1 Level AA with e.g. [Accessibility Insights for Web plugin for Chrome](https://accessibilityinsights.io/docs/en/web/overview)
+
+* Check it is MathJax... Right click!
+\[x = \frac{-b\pm\sqrt{b^2 - 4ac}}{2a}\]
+
+  * Provides/enables: navigation, chunking, zoom, copy/paste, colour, size and layout changes...
+  * Structural integrity enables assistive technology including text-to-speech, screenreaders, electronic Braille
+  * Fallback for ARIA-aware AT without native support
+  * AT providers without native support and not ARIA aware are a problem but not your problem.
+
+## Moodle support throughout!
+
+Moodle enables you to create pages which meet these requirements using LaTeX for the equations. 
+
+**But** Moodle does not provide the necessary features of a mathematical/scientific document preparation system. 
+
+* Web + MathJax is the most accessible end format for a mathematical or scientific document but we need a way to prepare the document 
+
+## Supporting mathematicians
+
+We are not perscriptive, we'll support anything which helps them do the job.
+
+* Try to convert LaTeX itself
+  * It is **not possible** to convert LaTeX to html in the general case. 
+  * Most powerful are [tools which may or may not work and that cannot tell you, in general why something doesn't work](https://hub.docker.com/r/bathmash/mathaltnotes) but they are only usable by experts
+  * Easiest for non-experts is [lwarp](https://ctan.org/pkg/lwarp?lang=en) but beware of some hard work (documentation currently 1237 pages) - what happens depends on what you are doing in LaTeX and how and you have to work that out and test for accessibility for yourself. 
+* Use a markup/markdown language suited to transform to html e.g (R)Markdown/Bookdown, incorporating LaTeX for equations and a simple markup language for the rest of the document. You will be confined to a transformable subset with will a quick compile loop. The output has known accessibility features. It is still extensible, just more reasonably so.
+  * RMarkdown incorporates LaTeX for equations and a simple markup language for the rest of the document. 
+  * Authors are confined to a transformable subset with a quick compile loop and a supportive GUI. 
+  * The output has known accessibility features. 
+  * The typesetting is still extensible, just more reasonably so.
+
+### Which one do I need?
+
+DIAGRAM
+
+### Lwarp demo
+
+
+### Markdown/RMarkdown/Bookdown demo
+
+* More information on getting started with RMarkdown see [Using R as a basis for writing an accessible mathematical document](https://stem-enable.github.io/RMarkdownWorkshop/)
+
+But, you will probably want [Bookdown](https://bookdown.org/) or more eventually:
+
+```{theorem, label="thm1"}
+Bookdown is needed for things like theorems and internal references
+```
+
+Now go to \@ref(thm:thm1).
+
+* More information on getting started [RMarkdown workshop resources](https://stem-enable.github.io/RMarkdownWorkshop/)
+* [Bookdown](https://bookdown.org/) needed for theorems and intradocument referencing 
+
+### Work in progress: Clavertondown
+
+Added over the top of Bookdown and aimed specifically at making resources for students. 
+* This document and the variants are produced using it. 
+
+For instance:
+
+```{newtheorem, env='Thought', label="tho1"}
+You can create new theorem types
+```
+
+```{newtheorem, env='Nugget', label="nug1"}
+And you can have theorem types share numbering
+
+```
+
+* [Clavertondown](https://bathmash.github.io/clavertondown/) for additional functionality important in pure mathematics and for lecturers generally 
+
+
+## Accessible diagrams and interactive/dynamic elements
+
+### Interactive/dynamic
+
+* Check that the software/system meets WCAG 2.1 level AA - ask the vendor, procure on this basis
+* Check that mathematics is rendered via MathJax
+* Add subtitles/closed captions to video 
+  * We do this by upload to YouTube, wait for automatic captions to be provided, download as transcript, correct in a text editor, upload, get YouTube to sync and then download as subtitles and add as a subtitle track using.
+* Handwriting is an interactive/dynamic element which cannot be made accessible
+  * If you handwrite in OneNote then some aspects of it can be accessed but it is complicated...
+
+**Don't avoid using something if it currently can't be made technically accessible but is important for other sorts of access.**
+
+* Handwriting and Geogebra aren't fully accessible but it is really great for many disabled students. 
+* Provide an alternative way to access the same content or experience.
+  * Rely on a 'spine' of accessible materials and make sure you are referencing them e.g. Hand annotate a gappy version of accessible notes and say aloud what you are doing where and have the full notes have what you are going to handwrite
+* Tell students what is and isn't accessible and who to contact if it is a problem. Know what you will do if they contact you!
+
+### Desmos demo
+
+Desmos is screenreader accessible and also produces tactile diagrams. If you can redraw the graph in Desmos then do that and put a “Link to accessible Desmos sheet: LINK” in as the alterative text. So that none screenreader users can find the Desmos graph as well (it might help them too) put a link somewhere else as well.
+
+<iframe src="https://www.desmos.com/calculator/rtvcqeg9ol?embed" width="700px" height="300px" style="border: 1px solid #ccc" frameborder="0">![[Interactive plot of sine](https://www.desmos.com/calculator/rtvcqeg9ol)\label{sine}](./Figs/desmos-sine-graph.png){width=30% longdesc=https://www.desmos.com/calculator/rtvcqeg9ol}</iframe>
+
+
+### BrailleR example
+
+If you are making some sorts of statistical graphs and you know how to use R (fairly well) then there is a [BrailleR](https://github.com/ajrgodfrey/BrailleR) package which can create descriptions of some sorts of graphs automatically. 
+
+```{r libraries, eval=FALSE, include=FALSE}
+library(BrailleR)
+```
+```{r data, eval=FALSE, include=FALSE}
+mydata = rnorm(1000)
+```
+
+```{r makeplots, eval=FALSE, include=FALSE}
+MakeAccessibleSVG(hist(mydata),file="./Figs/myhist2")
+BrowseSVG(file="./Figs/myhist2",dir="./Figs")
+pdf('./Figs/myhist2.svg.pdf',width = 4,height=4,paper='special')
+hist(mydata)
+dev.off()
+```
+<!--![[Follow link for interative plot](./Figs/myhist2.html)\label{histplotinteractive}](./Figs/myhist2.svg){longdesc=./myhist2.html}-->
+
+
+### Output from code (and data)
+
+If you made a diagram using data or code or some textbased input mechanism then provide that text or link to it somehow.
+
+### All of the rest
+
+* DIAGRAM Center (http://diagramcenter.org/) has some great resources for those new to diagram description:
+  * Poet Image Description Training Tool
+  * Image description guidelines
+  * Sample book
+  * Webinar: http://diagramcenter.org/diagramwebinars.html#compleximages
+* UKAAF has guidance on accessible images: https://www.ukaaf.org/accessible-images/
+* NCAM (Old site) has guidelines and examples: http://ncamftp.wgbh.org/ncam-old-site/experience_learn/educational_media/stemdx.html
+
+### If having used the above you just don't know what to do? 
+
+Some diagrams actually are so complex that a text description is unhelpful or they have a particular visual function, in that they are not required to communicate the mathematical nature of the object but they are required for the learner to grasp a visualisation of the object which in itself is needed somehow (e.g. image of a Klein bottle is a 2D representation of a 4D object embedded into 3D space, trying to describe it or make a tactile diagram is never going to work as well as the visual does for a sighted person as simply handing a blind person an appropriately well-made model, don’t be afraid to say “too complex/whatever for description, please request a tactile graphic from INSERT MAIL ADDRESS or a model from INSERT MAIL ADDRESS”)
+
+# What is my next step?
+
+If you have a laptop, have a play:
+* LaTeX available? Try Lwarp
+* Rstudio available? Try RMarkdown
+* Chrome web browser available? Try Desmos with ChromeVox
+
+If not, watch, exchange ideas, think, chat:
+* What achieveable next step can you commit to to improve the accessiblibility of your mathematical teaching resources for next academic year?
+
+# Further information
+
+* [Accessibility Special Interest Group](http://www.sigma-network.ac.uk/sigs/accessibility-sig/)
+* [sigma Network](http://www.sigma-network.ac.uk/) 
+* A collection of links to most things I have done related to maths accessibility can be found at [Mathematics accessibility on the Skills Centre: MASH site](https://www.bath.ac.uk/projects/mathematics-accessibility/)
+
+# Thanks for listening and watching
+
+* This document is available at [Accessible maths e-resources](https://stem-enable.github.io/Accessibility-of-maths-e-resources/index.html)
+
+#### Any questions? {-}
+
+* My email address is [E.H.Cliffe@bath.ac.uk](mailto:E.H.Cliffe@bath.ac.uk)

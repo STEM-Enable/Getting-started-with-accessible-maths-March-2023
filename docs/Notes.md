@@ -13,6 +13,9 @@ output:
     number_sections: true
     keep_md: true
     dev: svg
+  clavertondown::epub_clav:
+    toc: true
+    dev: svg
   clavertondown::gitbook_clav:
     split_by: section
     dev: svg
@@ -28,9 +31,6 @@ output:
     keep_tex: true
     fig_caption: false
     toc: true
-  clavertondown::epub_clav:
-    toc: true
-    dev: svg
 ---
 
 \newpage
@@ -276,16 +276,16 @@ We built [Clavertondown](https://bathmash.github.io/clavertondown/) for addition
 
 # What is my next step?
 
-If you have a laptop, have a play right now!
+To play with right now... or later!
 
-* LaTeX available? Try [Lwarp](LINK)
-* Rstudio available? Try [RMarkdown](https://stem-enable.github.io/RMarkdownWorkshop/)
+* LaTeX available? Try [Lwarp](https://github.com/STEM-Enable/Getting-started-with-accessible-maths-March-2023/raw/main/example/LwarpExample.zip)
+* Rstudio available? Install rmarkdown and try [RMarkdown](https://stem-enable.github.io/RMarkdownWorkshop/)
 * Chrome web browser available? Try [Desmos with ChromeVox](https://people.bath.ac.uk/cspehj/coventry/arclengthInR.html)
 * Word user? Write some text and an equation and [listen back to it](https://stem-enable.github.io/WordWorkshop/immersive.html) 
 
-If not, watch, exchange ideas, think, chat:
+Exchange ideas, think, chat, offer a report back:
 
-* What achieveable next step can you commit to to improve the accessiblibility of your mathematical teaching resources for next academic year?
+* What achieveable next step can you commit to which will improve the accessiblibility of your mathematical teaching resources for next academic year?
 
 # Further information
 

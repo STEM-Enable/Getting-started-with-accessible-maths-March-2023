@@ -8,6 +8,9 @@ classoption: a4paper
 fontsize: 10pt
 geometry: margin=2.5cm
 output:
+  clavertondown::epub_clav:
+    toc: true
+    dev: svg
   clavertondown::gitbook_clav:
     split_by: section
     dev: svg
@@ -27,9 +30,6 @@ output:
     toc: true
     number_sections: true
     keep_md: true
-    dev: svg
-  clavertondown::epub_clav:
-    toc: true
     dev: svg
 ---
 
@@ -202,7 +202,7 @@ Also... this generally won't work for the mathematicians and some scientists.
   * Beware of some hard work (documentation currently 1237 pages)
   * What happens depends on what you are doing in LaTeX
   * You have to work that out and test for accessibility for yourself.
-  * [Quick lwarp demo](LINK) ([link for Emma during the talk](https://posit.cloud/content/5657619))
+  * [Quick lwarp demo](https://github.com/STEM-Enable/Getting-started-with-accessible-maths-March-2023/raw/main/example/LwarpExample.zip) ([link for Emma during the talk](https://posit.cloud/content/5657619))
  
 ## RMarkdown formats
  

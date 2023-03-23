@@ -13,6 +13,12 @@ output:
     number_sections: true
     keep_md: true
     dev: svg
+  clavertondown::gitbook_clav:
+    split_by: section
+    dev: svg
+    config:
+      download: [["Notes.pdf","Standard print PDF"], ["NotesClear.pdf","Clear print PDF"], ["NotesLarge.pdf","Large print PDF"], ["Notes.docx","Accessible Word document"], ["Notes.epub","Accessible EPub book" ]]
+      sharing: no
   clavertondown::html_clav:
     toc: true
     dev: svg
@@ -22,12 +28,6 @@ output:
     keep_tex: true
     fig_caption: false
     toc: true
-  clavertondown::gitbook_clav:
-    split_by: section
-    dev: svg
-    config:
-      download: [["Notes.pdf","Standard print PDF"], ["NotesClear.pdf","Clear print PDF"], ["NotesLarge.pdf","Large print PDF"], ["Notes.docx","Accessible Word document"], ["Notes.epub","Accessible EPub book" ]]
-      sharing: no
   clavertondown::epub_clav:
     toc: true
     dev: svg
@@ -202,7 +202,7 @@ Also... this generally won't work for the mathematicians and some scientists.
   * Beware of some hard work (documentation currently 1237 pages)
   * What happens depends on what you are doing in LaTeX
   * You have to work that out and test for accessibility for yourself.
-  * [Quick lwarp demo](LINK) ([link for Emma during the talk](https://posit.cloud/content/5641574))
+  * [Quick lwarp demo](https://github.com/STEM-Enable/Getting-started-with-accessible-maths-March-2023/raw/main/example/LwarpExample.zip) ([link for Emma during the talk](https://posit.cloud/content/5657619))
  
 ## RMarkdown formats
  
@@ -213,8 +213,9 @@ RMarkdown is a language designed for transform to html
 * Authors are confined to a transformable subset with a quick compile loop and a supportive GUI. 
 * The output has known accessibility features. 
 * The typesetting is still extensible, just more reasonably so.
-* [RMarkdown Demo]() 
 * More information on getting started with RMarkdown see [Using R as a basis for writing an accessible mathematical document](https://stem-enable.github.io/RMarkdownWorkshop/)
+* [Quick RMarkdown demo](https://github.com/STEM-Enable/RMarkdownWorkshop/raw/master/examples/arclengthInR.zip) ([link for Emma during the talk](https://posit.cloud/content/4447915))
+
 
 ## Bookdown/Clavertondown
 
